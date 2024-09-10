@@ -22,7 +22,7 @@ function Footer() {
   
 
     return (
-        <footer className="mx-auto bg-[#ffffff96] rounded-t-xl border-t border-gray-500">
+        <footer className="mx-auto bg-[#ffffff96] dark:bg-accent-light rounded-t-xl border-t border-gray-500">
             <div className="py-8 flex flex-col items-center">
                 <img src={Footer_Logo} alt="Praveenkumar S Logo" className="w-20 h-20 justify-self-center mb-4" />
                 <h1 className='mb-8'>

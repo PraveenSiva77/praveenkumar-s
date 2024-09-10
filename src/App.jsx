@@ -11,6 +11,8 @@ import Journey from './sections/Journey';
 import Projects from './sections/Projects';
 import Services from './sections/Services';
 import Skills from './sections/Skills';
+import HireMe from './pages/HireMe';
+import ProjectSingle from './pages/ProjectSingle';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/projects" element={<Projects />} /> 
       <Route path="/terms-conditions" element={<TermsConditions />} />
+      <Route path="/hireme" element={<HireMe/>}/>
+      <Route path="/projectinfo" element={<ProjectSingle/>}/>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

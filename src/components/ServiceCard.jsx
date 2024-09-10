@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GoArrowRight } from "react-icons/go";
 import { Modal } from 'flowbite';
 import { FaRegCheckCircle } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function ServiceCard({ keyId, service_name, service_icon, service_description, key_points }) {
 
@@ -24,10 +25,10 @@ function ServiceCard({ keyId, service_name, service_icon, service_description, k
 
     return (
         <>
-            <div className="relative w-[90%] flex flex-col justify-end py-8 px-8 xxsx:px-4 smx:w-[90vw] border-[1px] border-blue-500 rounded-lg hover:shadow-md hover:shadow-blue-400" key={keyId}>
+            <div className="relative w-[90%] flex flex-col justify-end py-8 px-8 xxsx:px-4 smx:w-[90vw] border-[1px] border-blue-500 rounded-lg hover:shadow-md hover:shadow-blue-400 dark:hover:shadow-secondary-dark" key={keyId}>
                 <div className='flex flex-col items-start mt-8'>
                     <div className="w-8 mb-4">{service_icon}</div>
-                    <h3 className="text-2xl font-semibold mb-4">{service_name}</h3>
+                    <h3 className="text-2xl font-semibold mb-4 dark:text-text-dark">{service_name}</h3>
                 </div>
 
                 <span
@@ -67,7 +68,7 @@ function ServiceCard({ keyId, service_name, service_icon, service_description, k
                         </div>
                         {/* Modal body */}
                         <div className="p-4 md:p-5 space-y-4 flex flex-col items-center gap-4">
-                            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            <p className="text-base leading-relaxed text-center text-gray-500 dark:text-gray-400">
                                 {service_description}
                             </p>
 
@@ -75,7 +76,7 @@ function ServiceCard({ keyId, service_name, service_icon, service_description, k
                                 {key_points.map((data, index) => (
                                     <li key={index} className="flex items-center gap-4">
                                         <FaRegCheckCircle className='text-blue-500' />
-                                        <p className="text-gray-500">{data}</p>
+                                        <p className="text-gray-500 dark:text-text-dark">{data}</p>
                                     </li>
                                 ))}
                             </ul>
@@ -84,7 +85,7 @@ function ServiceCard({ keyId, service_name, service_icon, service_description, k
                         {/* Modal Footer */}
                         <div className='p-8 flex items-center justify-center gap-4'>
                         <button data-modal-hide="popup-modal" type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-8 py-2.5 text-center">
-                            Hire Me
+                           <Link to="/hireme" onClick={() => toggleModal(false)}>Hire Me</Link>
                         </button>
                         </div>
                     </div>

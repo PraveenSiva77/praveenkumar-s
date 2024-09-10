@@ -76,7 +76,7 @@ import {
 
 // Header Link Data
 export const HeaderData = [
-    {name: "Home", to:"/"},
+    {name: "Home", to:"#"},
     {name: "About", to:"#about"},
     {name: "Skills", to:"#skills"},
     {name: "Services", to:"#services"},

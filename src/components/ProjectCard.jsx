@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import Avatars from './Avatars';
 import { FaGithub } from "react-icons/fa";
-import { IoLinkSharp } from "react-icons/io5";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 // For Modal
 import { Modal } from 'flowbite';
 import { MdAccessTime } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 function ProjectCard({
@@ -48,33 +49,35 @@ function ProjectCard({
   return (
 
     <>
-        <div key={keyId} onClick={() => toggleModal(true)} class="max-w-sm xxsx:w-[100%] cursor-pointer bg-white p-2 border border-gray-300 rounded-2xl hover:shadow-md hover:shadow-blue-400 shadow dark:bg-gray-800 dark:border-gray-700">
-            <div className='relative cursor-pointer'>
-                <img class="rounded-xl aspect-video shadow border" src={image} alt={title} />
-            </div>
-            <div class="p-4 flex flex-col gap-2 items-start">
-                <div className='w-full flex items-center justify-between pl-2 xxsx:flex-col'>
-                    <div className='cursor-pointer text-start'>
-                        <h1 class="w-[180px] smx:w-[200px] mdx:w-[250px] xxsx:text-center overflow-hidden text-ellipsis whitespace-nowrap mb-2 text-lg font-bold tracking-tight text-gray-700 dark:text-white">{title}</h1>
-                    </div>
-                    <span className={` top-2 right-2 px-3 py-1 text-[0.7rem] rounded-full text-white ${statusColor(status)}`}>{status}</span>
+        <Link to="/projectinfo">
+            <div key={keyId} class="max-w-sm xxsx:w-[100%] cursor-pointer bg-white dark:bg-transparent p-2 border dark:border-[1.5px] border-gray-300 rounded-2xl hover:shadow-md hover:shadow-secondary-light shadow dark:bg-gray-800 dark:border-gray-700">
+                <div className='relative cursor-pointer'>
+                    <img class="rounded-xl aspect-video shadow border" src={image} alt={title} />
                 </div>
-                {/* <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{duration}</p> */}
-
-                <div className='w-full flex items-center justify-between pr-2 xxsx:flex-col xxsx:gap-3'>
-                    <Avatars avatarList={members}/>
-                    <div className='flex items-center justify-center gap-4'>
-                        {githubLink && <a href={githubLink}>
-                            <FaGithub className='text-xl text-gray-700 hover:text-blue-500 hover:scale-105'/>
-                        </a>}
-                        {demoLink && <a href={demoLink}>
-                            <IoLinkSharp className='text-2xl text-gray-700 hover:text-blue-500 hover:scale-105'/>
-                        </a>}
+                <div class="p-4 flex flex-col gap-2 items-start">
+                    <div className='w-full flex items-center justify-between pl-2 xxsx:flex-col'>
+                        <div className='cursor-pointer text-start'>
+                            <h1 class="w-[180px] smx:w-[200px] mdx:w-[250px] xxsx:text-center overflow-hidden text-ellipsis whitespace-nowrap mb-2 text-lg font-bold tracking-tight text-gray-700 dark:text-white">{title}</h1>
+                        </div>
+                        <span className={` top-2 right-2 px-3 py-1 text-[0.7rem] rounded-full text-white ${statusColor(status)}`}>{status}</span>
                     </div>
+                    {/* <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{duration}</p> */}
 
+                    <div className='w-full flex items-center justify-between pr-2 xxsx:flex-col xxsx:gap-3'>
+                        <Avatars avatarList={members}/>
+                        <div className='flex items-center justify-center gap-4 text-gray-700 dark:text-text-dark'>
+                            {githubLink && <a href={githubLink}>
+                                <FaGithub className='text-xl hover:text-blue-500 hover:scale-105'/>
+                            </a>}
+                            {demoLink && <a href={demoLink}>
+                                <HiOutlineExternalLink className='text-2xl hover:text-blue-500 hover:scale-105'/>
+                            </a>}
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
 
         {/* Main modal */}
         <div

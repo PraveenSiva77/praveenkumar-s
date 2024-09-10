@@ -9,7 +9,7 @@ function Filter({ selectedItem, onSelect, filterList }) {
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg smx:px-6 ${
                         selectedItem === index
                             ? 'bg-blue-500 text-white'
-                            : 'bg-gray-200 text-gray-700'
+                            : 'bg-gray-200 dark:bg-transparent dark:border dark:border-primary-light text-gray-700 dark:text-secondary-light'
                     }`}
                     onClick={() => onSelect(index)}
                 >
