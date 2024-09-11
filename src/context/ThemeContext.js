@@ -4,23 +4,18 @@ import React, { createContext, useState, useEffect } from 'react';
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState('light'); // Default to light mode
+    // Set the initial theme from localStorage or fallback to 'light'
+    const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
 
     useEffect(() => {
-        // Load theme from localStorage
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-        }
-    }, []);
-
-    useEffect(() => {
-        // Save theme to localStorage and apply it to body
+        // Apply the theme to the document class
+        document.documentElement.className = theme;
+        // Save the theme in localStorage
         localStorage.setItem('theme', theme);
-        document.body.className = theme; // Apply theme to body
     }, [theme]);
 
     const toggleTheme = () => {
+        // Toggle between 'light' and 'dark' themes
         setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
     };
 

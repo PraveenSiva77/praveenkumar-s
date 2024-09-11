@@ -3,6 +3,7 @@ import SP_Logo from '../assets/Logo_2.svg';
 import LogoBase from '../assets/Logo_Base.svg';
 import { HeaderData, LetsTalk} from './Data';
 import ThemeToggle from './ThemeToggle';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
@@ -17,7 +18,7 @@ function Header() {
     };
 
     return (
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-background-light dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-accent-light dark:border-accent-dark">
         <div className="max-w-[1024px] flex flex-wrap items-center justify-between mx-auto p-2">
           <a
             href=""
@@ -31,7 +32,7 @@ function Header() {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <a
               href={LetsTalk.to}
-              className="text-white bg-blue-600 xsx:hidden hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-600"
+              className="text-text-dark bg-blue-600 xsx:hidden hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-500 dark:focus:ring-blue-600"
             >
               {LetsTalk.name}
             </a>
@@ -62,9 +63,7 @@ function Header() {
               </svg>
             </button>
           </div>
-
           <ThemeToggle /> {/* Using ThemeToggle component */}
-
           <div
             className={`items-center justify-between mdx:justify-center ${
               isMenuOpen ? "flex" : "hidden"

@@ -21,7 +21,7 @@ function App() {
       <Route path="/projects" element={<Projects />} /> 
       <Route path="/terms-conditions" element={<TermsConditions />} />
       <Route path="/hireme" element={<HireMe/>}/>
-      <Route path="/projectinfo" element={<ProjectSingle/>}/>
+      <Route path="/projectinfo/:keyId" element={<ProjectSingle/>}/>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

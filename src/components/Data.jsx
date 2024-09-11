@@ -284,23 +284,28 @@ export const ProjectData = [
     members: [
       {
         name: "Praveenkumar S",
-        image: Praveen_Img
+        image: Praveen_Img,
+        role: "ML & Web Developer",
       },
       {
         name: "Sibi Siddharth S",
-        image: Sibi_img, 
+        image: Sibi_img,
+        role: "ML & Web Developer", 
       },
       {
         name: "Srinivasan R",
-        image: Srini_img, 
+        image: Srini_img,
+        role: "AI/ML Developer",  
       },
       {
         name: "Uma Maheswari P",
-        image: Uma_Img
+        image: Uma_Img,
+        role: "ML Developer", 
       },
       {
         name: "Surya B",
-        image: Surya_Img
+        image: Surya_Img,
+        role: "Web Developer", 
       },
     ],
   },
@@ -320,15 +325,18 @@ export const ProjectData = [
     members: [
       {
         name: "Praveenkumar S",
-        image: Praveen_Img
+        image: Praveen_Img,
+        role: "ML & Web Developer", 
       },
       {
         name: "Uma Maheswari P",
-        image: Uma_Img
+        image: Uma_Img,
+        role: "ML Developer",
       },
       {
         name: "Surya B",
-        image: Surya_Img
+        image: Surya_Img,
+        role: "ML & Web Developer",
       },
     ],
   },
@@ -348,11 +356,13 @@ export const ProjectData = [
     members: [
       {
         name: "Praveenkumar S",
-        image: Praveen_Img, 
+        image: Praveen_Img,
+        role: "Web Developer", 
       },
       {
         name: "Sibi Siddharth S",
-        image: Sibi_img, 
+        image: Sibi_img,
+        role: "Web Developer",
       },
     ],
   },
@@ -372,11 +382,13 @@ export const ProjectData = [
     members: [
       {
         name: "Praveenkumar S",
-        image: Praveen_Img, 
+        image: Praveen_Img,
+        role: "Web Developer", 
       },
       {
         name: "Sibi Siddharth S",
-        image: Sibi_img, 
+        image: Sibi_img,
+        role: "Web Developer", 
       },
     ],
   },
@@ -396,23 +408,28 @@ export const ProjectData = [
     members: [
       {
         name: "Praveenkumar S",
-        image: Praveen_Img, 
+        image: Praveen_Img,
+        role: "ML & Web Developer", 
       },
       {
         name: "Sibi Siddharth S",
-        image: Sibi_img, 
+        image: Sibi_img,
+        role: "ML & Web Developer",
       },
       {
         name: "Srinivasan R",
-        image: Srini_img, 
+        image: Srini_img,
+        role: "AI/ML Developer", 
       },
       {
         name: "Surya B",
-        image: Surya_Img, 
+        image: Surya_Img,
+        role: "ML Developer", 
       },
       {
         name: "Arivumani A",
-        image: Arivu_Img, 
+        image: Arivu_Img,
+        role: "Data Analyst", 
       },
     ],
   },
@@ -432,11 +449,13 @@ export const ProjectData = [
     members: [
       {
         name: "Praveenkumar S",
-        image: Praveen_Img, 
+        image: Praveen_Img,
+        role: "Web Developer",
       },
       {
         name: "Sibi Siddharth S",
-        image: Sibi_img, 
+        image: Sibi_img,
+        role: "Web Developer",
       },
     ],
   },
@@ -456,23 +475,28 @@ export const ProjectData = [
     members: [
       {
         name: "Praveenkumar S",
-        image: Praveen_Img, 
+        image: Praveen_Img,
+        role: "ML & Web Developer", 
       },
       {
         name: "Sibi Siddharth S",
-        image: Sibi_img, 
+        image: Sibi_img,
+        role: "ML & Web Developer",
       },
       {
         name: "Srinivasan R",
-        image: Srini_img, 
+        image: Srini_img,
+        role: "AI/ML Developer", 
       },
       {
         name: "Surya B",
-        image: Surya_Img, 
+        image: Surya_Img,
+        role: "Documentation", 
       },
       {
         name: "Arivumani A",
-        image: Arivu_Img, 
+        image: Arivu_Img,
+        role: "Testing", 
       },
     ],
   },

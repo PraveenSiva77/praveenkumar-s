@@ -1,6 +1,10 @@
 import React from 'react';
 
-function Avatars({ avatarList }) { 
+function Avatars({ avatarList = [] }) { 
+  if (!Array.isArray(avatarList)) {
+    return null; // Return null or fallback if it's not an array
+  }
+
   return (
     <div className="flex p-2 -space-x-2 overflow-hidden">
       {avatarList.map((data, index) => (

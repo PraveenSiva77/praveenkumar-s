@@ -16,16 +16,7 @@ function Projects() {
             {ProjectData.map((project, index) => (
                 <ProjectCard
                 keyId={index}
-                image={project.image ? project.image : projectImage}
-                title={project.title}
-                tags={project.tags}
-                duration={project.duration}
-                status={project.status}
-                members={project.members}
-                description={project.description}
-                demoLink={project.demoLink}
-                githubLink={project.githubLink}
-                role={project.role}
+                data={project}
                 />
             ))}
         </div>
