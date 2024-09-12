@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/praveenkumar-s/static/css/main.0a0a30ec.css",
-    "main.js": "/praveenkumar-s/static/js/main.abb283d7.js",
+    "main.js": "/praveenkumar-s/static/js/main.1f905c3d.js",
     "static/js/453.001b6fa2.chunk.js": "/praveenkumar-s/static/js/453.001b6fa2.chunk.js",
     "static/media/Praveenkumar_S.jpg": "/praveenkumar-s/static/media/Praveenkumar_S.bc466f0248bb32a5d7cf.jpg",
     "static/media/Sibi_Siddharth_S.jpg": "/praveenkumar-s/static/media/Sibi_Siddharth_S.5bcc004736442094e053.jpg",
@@ -29,11 +29,11 @@
     "index.html": "/praveenkumar-s/index.html",
     "static/media/Logo_2.svg": "/praveenkumar-s/static/media/Logo_2.fa01d49d0cecf532c92aed9330edfb19.svg",
     "main.0a0a30ec.css.map": "/praveenkumar-s/static/css/main.0a0a30ec.css.map",
-    "main.abb283d7.js.map": "/praveenkumar-s/static/js/main.abb283d7.js.map",
+    "main.1f905c3d.js.map": "/praveenkumar-s/static/js/main.1f905c3d.js.map",
     "453.001b6fa2.chunk.js.map": "/praveenkumar-s/static/js/453.001b6fa2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a0a30ec.css",
-    "static/js/main.abb283d7.js"
+    "static/js/main.1f905c3d.js"
   ]
 }
