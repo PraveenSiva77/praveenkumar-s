@@ -17,7 +17,7 @@ export default function NotFound() {
             <p
                 className="rounded-md bg-primary-light px-3.5 py-2.5 text-sm font-semibold text-text-dark shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-                <Link to="/">Go back home</Link>
+                <Link to="/praveenkumar-s">Go back home</Link>
             </p>
             </div>
         </div>
