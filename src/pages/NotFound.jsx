@@ -14,11 +14,12 @@ export default function NotFound() {
             Sorry, we couldn’t find the <span className='font-semibold'> page </span>you’re looking for.
             </p>
             <div className="mt-10 flex mdx:flex-col mdx:gap-6 items-center justify-center gap-x-6">
-            <p
-                className="rounded-md bg-primary-light px-3.5 py-2.5 text-sm font-semibold text-text-dark shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-                <Link to="/">Go back home</Link>
-            </p>
+                <Link 
+                    to="/"
+                    className="rounded-md bg-primary-light px-3.5 py-2.5 text-sm font-semibold text-text-dark shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                    Go back home
+                </Link>
             </div>
         </div>
         </main>

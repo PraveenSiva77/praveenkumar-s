@@ -17,7 +17,7 @@ function HomeData() {
 
 
   return (
-    <div id='home' className='h-[90vh] dark:bg-gray-900 max-w-[1024px] mx-auto p-4 py-8 my-8 flex flex-col items-center gap-16 mdx:h-[100%] mdx:flex-col'>
+    <div id='home' className='h-[90vh] mdx:h-full dark:bg-gray-900 max-w-[1024px] mx-auto p-4 py-12 my-8 flex flex-col items-center gap-16 mdx:flex-col'>
         <div className="container flex items-center py-20 mdx:py-12 gap-16 mdx:gap-8 mdx:flex-col">
             {/* Social Media Icons */}
             <div className="icons_base text-xl flex flex-col gap-4 mdx:order-3 mdx:flex-row">
@@ -30,12 +30,12 @@ function HomeData() {
 
 
             {/* Profile Description */}
-            <div className="description_base mdx:order-2 flex flex-col gap-12 items-start">
-                <div className='flex flex-col gap-2 items-start'>
+            <div className="description_base mdx:order-2 flex flex-col gap-12 items-start mdx:items-center">
+                <div className='flex flex-col gap-2 items-start mdx:items-center'>
                     <h1 className='profile_name smx:text-3xl mdx:4xl lgx:text-4xl text-5xl font-bold text-primary-light'>{nameInfo}</h1>
-                    <span className='profile_role ml-1 text-2xl smx:text-xl font-normal text-gray-700 dark:text-text-dark'>{roleInfo}</span>
+                    <span className='profile_role ml-1 mdx:ml-0 text-2xl smx:text-xl font-normal text-gray-700 dark:text-text-dark'>{roleInfo}</span>
                 </div>
-                <p className='profile_description text-gray-700 dark:text-text-dark leading-relaxed'>{description1}</p>
+                <p className='profile_description mdx:text-center text-gray-700 dark:text-text-dark leading-relaxed'>{description1}</p>
 
                 <CustomButton button_name="Say Hello!" button_icon={<RiSendPlaneFill/>} button_target="#contact"/>
             </div>

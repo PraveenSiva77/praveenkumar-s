@@ -29,7 +29,7 @@ function Footer() {
                     <a href="#" className="text-3xl font-bold text-center cursor-pointer tracking-wider text-gray-700 hover:text-blue-500">Praveen Siva</a>
                 </h1>
 
-                <ul className="flex justify-center gap-6 mb-8 smx:flex-col smx:items-center">
+                <ul className="flex justify-center flex-wrap gap-6 mb-8  smx:items-center">
                     <li>
                         <a href="#about" className="text-gray-700 hover:text-blue-500">Home</a>
                     </li>
@@ -63,7 +63,7 @@ function Footer() {
                     }
                 </div>
 
-                <span className="block mt-16 text-gray-800 text-center text-base">
+                <span className="block mt-16 text-gray-800 text-center text-base mdx:w-5/6">
                     &#169;2024 Designed & Developed by <a href="#" className='font-semibold hover:text-blue-500 cursor-pointer'>Praveen Siva</a>. All rights reserved
                 </span>
             </div>

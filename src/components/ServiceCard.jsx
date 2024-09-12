@@ -25,7 +25,7 @@ function ServiceCard({ keyId, service_name, service_icon, service_description, k
 
     return (
         <>
-            <div className="relative w-[90%] flex flex-col justify-end py-8 px-8 xxsx:px-4 smx:w-[90vw] border-[1px] border-blue-500 rounded-lg hover:shadow-md hover:shadow-blue-400 dark:hover:shadow-secondary-dark" key={keyId}>
+            <div onClick={() => toggleModal(true)} className="relative w-[90%] cursor-pointer flex flex-col justify-end py-8 px-8 xxsx:px-4 smx:w-[90vw] border-[1px] border-blue-500 rounded-lg hover:shadow-md hover:shadow-blue-400 dark:hover:shadow-secondary-dark" key={keyId}>
                 <div className='flex flex-col items-start mt-8'>
                     <div className="w-8 mb-4">{service_icon}</div>
                     <h3 className="text-2xl font-semibold mb-4 dark:text-text-dark">{service_name}</h3>
@@ -84,9 +84,13 @@ function ServiceCard({ keyId, service_name, service_icon, service_description, k
 
                         {/* Modal Footer */}
                         <div className='p-8 flex items-center justify-center gap-4'>
-                        <button data-modal-hide="popup-modal" type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-8 py-2.5 text-center">
-                           <Link to="/hireme" onClick={() => toggleModal(false)}>Hire Me</Link>
-                        </button>
+                            <Link 
+                                to="/hireme"
+                                onClick={() => toggleModal(false)}
+                                class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-8 py-2.5 text-center"
+                            >
+                                Hire Me
+                            </Link>
                         </div>
                     </div>
                 </div>

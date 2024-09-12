@@ -12,7 +12,7 @@ function About() {
     const description2 = ProfileInfo.find(info => info.title === "Description 2") ?.info;
 
   return (
-    <div id='about' className='max-w-[1024px] mx-auto py-20 p-4 mdx:py-4 lgx:py-4'>
+    <div id='about' className='max-w-[1024px] mx-auto py-24 p-4 mdx:py-4 lgx:py-4'>
         <PageTitle title="About" description="Who I am and What I Do?"/>
         <div className='container mx-auto my-4 py-12 flex lgx:flex-col smx:text-center items-center justify-center gap-20'>
             <img src={ProfileImage[0].image} alt={ProfileImage[0].name} className='max-w-[100%] w-[350px] mdx:w-[250px] smx:w-[80vw] rounded-md' />

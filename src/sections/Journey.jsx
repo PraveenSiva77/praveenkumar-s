@@ -18,7 +18,7 @@ function Journey() {
     const filteredData = JourneyData.filter((data) => data.type === selectedFilterType);
 
     return (
-        <div id='journey' className='max-w-[1024px] mx-auto py-32 mdx:py-4 lgx:py-4'>
+        <div id='journey' className='max-w-[1024px] mx-auto py-24 mdx:py-4 lgx:py-4'>
             <PageTitle title="My Journey" description="How I've Evolved in My Career" />
 
             <div className="container mx-auto py-12">
@@ -26,7 +26,7 @@ function Journey() {
                 <Filter selectedItem={selectedItem} onSelect={handleSelect} filterList={JourneyType} />
 
                 {/* Display content based on selected filter */}
-                <div className="flex flex-col items-start smx:items-center smx:gap-4 mdx:w-[90%] w-max mx-auto py-12 mdx:gap-8">
+                <div className="flex flex-col items-start smx:items-center smx:gap-4 mdx:w-[90%] w-max mx-auto py-6 mdx:gap-8">
                     {filteredData.map((data, index) => (
                         <JourneyCard
                             key={index}

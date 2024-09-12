@@ -17,7 +17,7 @@ import ProjectSingle from './pages/ProjectSingle';
 function App() {
   return (
     <Routes >
-      <Route path='/' element={<LandingPage />} />
+      <Route index element={<LandingPage />} />
       <Route path="/projects" element={<Projects />} /> 
       <Route path="/terms-conditions" element={<TermsConditions />} />
       <Route path="/hireme" element={<HireMe/>}/>
