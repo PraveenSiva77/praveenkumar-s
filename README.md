@@ -1,4 +1,4 @@
 # Praveenkumar S
 
 ## Update Log
-  - Latest Update v1.7
+  - Latest Update v1.8
