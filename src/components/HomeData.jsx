@@ -17,7 +17,7 @@ function HomeData() {
 
 
   return (
-    <div className='dark:bg-gray-900 max-w-[1024px] mx-auto p-4 py-8 my-8 flex flex-col items-center gap-16 mdx:h-[100%] mdx:flex-col'>
+    <div id='home' className='h-[90vh] dark:bg-gray-900 max-w-[1024px] mx-auto p-4 py-8 my-8 flex flex-col items-center gap-16 mdx:h-[100%] mdx:flex-col'>
         <div className="container flex items-center py-20 mdx:py-12 gap-16 mdx:gap-8 mdx:flex-col">
             {/* Social Media Icons */}
             <div className="icons_base text-xl flex flex-col gap-4 mdx:order-3 mdx:flex-row">

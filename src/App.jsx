@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Switch } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import NotFound from './pages/NotFound';
 import TermsConditions from './pages/TermsConditions';
@@ -16,7 +16,8 @@ import ProjectSingle from './pages/ProjectSingle';
 
 function App() {
   return (
-    <Routes>
+
+    <Routes >
       <Route path="/" element={<LandingPage />} />
       <Route path="/projects" element={<Projects />} /> 
       <Route path="/terms-conditions" element={<TermsConditions />} />

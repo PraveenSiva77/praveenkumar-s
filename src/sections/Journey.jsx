@@ -5,6 +5,7 @@ import Filter from '../components/Filter';
 import { JourneyData, JourneyType } from '../components/Data';
 
 function Journey() {
+
     const [selectedItem, setSelectedItem] = useState(0);
 
     const handleSelect = (index) => {

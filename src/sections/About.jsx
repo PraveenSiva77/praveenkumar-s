@@ -11,7 +11,6 @@ function About() {
 
     const description2 = ProfileInfo.find(info => info.title === "Description 2") ?.info;
 
-
   return (
     <div id='about' className='max-w-[1024px] mx-auto py-20 p-4 mdx:py-4 lgx:py-4'>
         <PageTitle title="About" description="Who I am and What I Do?"/>

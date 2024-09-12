@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import ThemeToggle from '../components/ThemeToggle'
 import { MdAccessTime } from "react-icons/md";
@@ -13,6 +13,10 @@ import DummyThumbDark from '../assets/Project/ProjectThumb-Dark.png';
 function ProjectSingle() {
 
   const {theme} = useContext(ThemeContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   const location = useLocation();
   const {project: data} = location.state;
@@ -82,17 +86,17 @@ function ProjectSingle() {
         </div>
 
         {/* Contributors */}
-        <div className='mt-12 w-4/6'>
+        <div className='mt-12 w-4/6 smx:w-4/6 xsx:w-full'>
           <h1 className='text-xl dark:text-text-dark font-semibold text-center rounded-full underline py-1'>Contributors </h1>
 
           <div className='flex flex-wrap justify-center gap-4 mt-8'>
             {membersList.map((member, index) => (
-              <div key={index} className='flex items-center justify-start gap-4 text-center rounded-lg bg-accent-light pl-4 pr-6 py-2'>
+              <div key={index} className='flex items-center justify-start smx:w-full gap-4 text-center rounded-lg bg-accent-light pl-4 pr-6 py-2'>
                 <img src={member.image} alt={member.name} className='w-10 h-10 rounded-full ring-offset-2 ring-2 ring-primary-light'/>
 
                 <div className='flex flex-col'>
-                  <h1 className='text-start font-bold'>{member.name}</h1>
-                  <p className='text-start text-text-light text-sm'>{member.role}</p>
+                  <h1 className='text-start font-semibold mdx:text-sm smx:text-xs'>{member.name}</h1>
+                  <p className='text-start text-text-light text-sm smx:text-xs'>{member.role}</p>
                 </div>
               </div>
             ))}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 
 function Contact() {
+
   return (
     <div id='contact' className='max-w-[1024px] pt-28 pb-0 mdx:py-24 lgx:py-4 smx:py-24 xsx:py-4 mdx:h-auto mx-auto'>
       {/* Page Title */}

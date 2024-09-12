@@ -4,6 +4,7 @@ import ProjectCard from '../components/ProjectCard';
 import { ProjectData } from '../components/Data';
 
 function Projects() {
+
   return (
     <div id='projects' className='max-w-[1024px] mx-auto py-20'>
         <PageTitle title="Projects" description="Explore my diverse projects"/>

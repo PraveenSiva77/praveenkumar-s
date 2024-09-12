@@ -29,7 +29,7 @@ import Uma_Img from '../assets/Team/Uma_Maheswari_P.jpg'
 import DeepVision from '../assets/Project/Deep Vision Thumbnail.png';
 import Varunah from '../assets/Project/Varunah 2k24 Thumbnail.png';
 import RoyalsConnect from '../assets/Project/Royals Connect 2k24 Thumbnail.png';
-import AudioSearch from '../assets/Project/Audio Search Thumbnail.png';
+import AudioSearch from '../assets/Project/Audio-Search-Thumbnail.png';
 import EcommerceWebsite from '../assets/Project/Ecommerce Website Thumnail.png';
 import ChatSoC from '../assets/Project/Chat SoC Thumbnail.png';
 import DeepFake from '../assets/Project/Deep fake Thumbnail.png';
@@ -76,12 +76,12 @@ import {
 
 // Header Link Data
 export const HeaderData = [
-    {name: "Home", to:"#"},
-    {name: "About", to:"#about"},
-    {name: "Skills", to:"#skills"},
-    {name: "Services", to:"#services"},
-    {name: "Journey", to:"#journey"},
-    {name: "Projects", to:"#projects"},
+    {name: "Home", to:"home"},
+    {name: "About", to:"about"},
+    {name: "Skills", to:"skills"},
+    {name: "Services", to:"services"},
+    {name: "Journey", to:"journey"},
+    {name: "Projects", to:"projects"},
 ]
 
 // Contact Button
@@ -298,8 +298,8 @@ export const ProjectData = [
         role: "AI/ML Developer",  
       },
       {
-        name: "Uma Maheswari P",
-        image: Uma_Img,
+        name: "Arivumani A",
+        image: Arivu_Img,
         role: "ML Developer", 
       },
       {

@@ -3,7 +3,7 @@ import SP_Logo from '../assets/Logo_2.svg';
 import LogoBase from '../assets/Logo_Base.svg';
 import { HeaderData, LetsTalk} from './Data';
 import ThemeToggle from './ThemeToggle';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 function Header() {
 
@@ -14,7 +14,7 @@ function Header() {
     };
 
     const handleMenuItemClick = () => {
-        setIsMenuOpen(false); // Close the menu after clicking a menu item
+      setIsMenuOpen(false);
     };
 
     return (
@@ -73,20 +73,20 @@ function Header() {
             <ul className="flex flex-col gap-6 p-4 md:p-0 mt-4 font-medium text-center md:flex-row md:mt-0">
               {HeaderData.map((link, index) => (
                 <li key={index} className="">
-                  <a
-                    href={link.to}
-                    className="py-2 px-6 ml-0 text-text-light mdx:hover:bg-blue-100 hover:text-blue-500 rounded md:bg-transparent md:text-gray-700 md:p-0 md:dark:text-text-dark dark:hover:text-primary-light"
-                    onClick={handleMenuItemClick}
+                  <Link 
+                  to={link.to}  
+                  className="cursor-pointer py-2 px-6 ml-0 text-text-light mdx:hover:bg-blue-100 hover:text-blue-500 rounded md:bg-transparent md:text-gray-700 md:p-0 md:dark:text-text-dark dark:hover:text-primary-light"
+                  onClick={handleMenuItemClick}
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
       </nav>
-    );
+    );  
 }
 
 export default Header;

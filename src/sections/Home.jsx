@@ -6,8 +6,8 @@ import ThemeToggle from '../components/ThemeToggle'
 function Home() {
   return (
     <>
-      <HomeData/>
       <Header/>
+      <HomeData/>
     </>
   )
 }
