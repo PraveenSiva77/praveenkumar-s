@@ -26,13 +26,13 @@ import Uma_Img from '../assets/Team/Uma_Maheswari_P.jpg'
 
 
 // Project Thumbnails
-import DeepVision from '../assets/Project/Deep Vision Thumbnail.png';
+import DeepVision from '../assets/Project/Deep-Vision-Thumbnail.png';
 import Varunah from '../assets/Project/Varunah 2k24 Thumbnail.png';
-import RoyalsConnect from '../assets/Project/Royals Connect 2k24 Thumbnail.png';
+import RoyalsConnect from '../assets/Project/Royals-Web-Thumbnail.png';
 import AudioSearch from '../assets/Project/Audio-Search-Thumbnail.png';
 import EcommerceWebsite from '../assets/Project/Ecommerce Website Thumnail.png';
 import ChatSoC from '../assets/Project/Chat SoC Thumbnail.png';
-import DeepFake from '../assets/Project/Deep fake Thumbnail.png';
+import DeepFake from '../assets/Project/DeepFake-Detection-Thumbnail.png';
 
 // Skills SVG
 import {
