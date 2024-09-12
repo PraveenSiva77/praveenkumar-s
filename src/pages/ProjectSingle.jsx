@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import ThemeToggle from '../components/ThemeToggle'
 import { MdAccessTime } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
+import { ThemeContext } from '../context/ThemeContext';
+
+// Dummy Thumbnail
+import DummyThumbLight from '../assets/Project/ProjectThumb-Light.png';
+import DummyThumbDark from '../assets/Project/ProjectThumb-Dark.png';
 
 function ProjectSingle() {
+
+  const {theme} = useContext(ThemeContext);
 
   const location = useLocation();
   const {project: data} = location.state;
@@ -39,7 +46,7 @@ function ProjectSingle() {
         </div>
 
         <div className='relative w-6/12 mdx:w-full'>
-            <img class="rounded-xl aspect-video w-full h-full  shadow border" src={data.image} alt={`${data.title} Thumbnail`} />
+            <img class="rounded-xl aspect-video w-full h-full  shadow border" src={data.image ? data.image : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={`${data.title} Thumbnail`} />
         </div>
       
         {/* Link Buttons */}

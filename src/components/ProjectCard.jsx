@@ -1,10 +1,17 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import Avatars from './Avatars';
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../context/ThemeContext';
+
+// Dummy Thumbnail
+import DummyThumbLight from '../assets/Project/ProjectThumb-Light.png';
+import DummyThumbDark from '../assets/Project/ProjectThumb-Dark.png';
 
 function ProjectCard({keyId, data}) { 
+
+    const {theme} = useContext(ThemeContext);
 
     // The statusColor function
     const statusColor = (status) => {
@@ -27,7 +34,7 @@ function ProjectCard({keyId, data}) {
         <Link to={`/projectinfo/${keyId}`} state={{ project: data }}>
             <div key={keyId} class="max-w-sm xxsx:w-[100%] cursor-pointer bg-white dark:bg-transparent p-2 border dark:border-[1.5px] border-gray-300 rounded-2xl hover:shadow-md hover:shadow-primary-light/70 shadow dark:bg-gray-800 dark:border-gray-700">
                 <div className='relative cursor-pointer'>
-                    <img class="rounded-xl aspect-video shadow" src={data.image} alt={data.title} />
+                    <img class="rounded-xl aspect-video shadow" src={data.image ? data.image : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={data.title} />
                 </div>
                 <div class="p-4 pb-0 flex flex-col gap-2 items-start">
                     <div className='w-full flex items-center justify-between pl-2 xxsx:flex-col'>
