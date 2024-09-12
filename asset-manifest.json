@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/praveenkumar-s/static/css/main.1a396535.css",
-    "main.js": "/praveenkumar-s/static/js/main.51e7273c.js",
+    "main.css": "/praveenkumar-s/static/css/main.73ee12a2.css",
+    "main.js": "/praveenkumar-s/static/js/main.e715a73f.js",
     "static/js/453.001b6fa2.chunk.js": "/praveenkumar-s/static/js/453.001b6fa2.chunk.js",
     "static/media/Praveenkumar_S.jpg": "/praveenkumar-s/static/media/Praveenkumar_S.bc466f0248bb32a5d7cf.jpg",
     "static/media/Sibi_Siddharth_S.jpg": "/praveenkumar-s/static/media/Sibi_Siddharth_S.5bcc004736442094e053.jpg",
     "static/media/Profile-Image.jpg": "/praveenkumar-s/static/media/Profile-Image.a86e187f81fed132ed06.jpg",
-    "static/media/Royals Connect 2k24 Thumbnail.png": "/praveenkumar-s/static/media/Royals Connect 2k24 Thumbnail.b3f5217101c533295eb6.png",
     "static/media/Ecommerce Website Thumnail.png": "/praveenkumar-s/static/media/Ecommerce Website Thumnail.460c0f3788d7b870c80a.png",
     "static/media/Varunah 2k24 Thumbnail.png": "/praveenkumar-s/static/media/Varunah 2k24 Thumbnail.e53ff11772bf7270dc19.png",
-    "static/media/Deep fake Thumbnail.png": "/praveenkumar-s/static/media/Deep fake Thumbnail.c7061790358c6cfecc3e.png",
     "static/media/Surya_B.jpg": "/praveenkumar-s/static/media/Surya_B.6639171967680f6cf8b6.jpg",
-    "static/media/Deep Vision Thumbnail.png": "/praveenkumar-s/static/media/Deep Vision Thumbnail.1db165d9f8db9b9b3e71.png",
     "static/media/Praveenkumar_S_DL_AI_Dev_Resume.pdf": "/praveenkumar-s/static/media/Praveenkumar_S_DL_AI_Dev_Resume.371a46c41fc711230e67.pdf",
     "static/media/ADEPT_Logo.png": "/praveenkumar-s/static/media/ADEPT_Logo.d22e15e4c6fae2d01fdc.png",
+    "static/media/DeepFake-Detection-Thumbnail.png": "/praveenkumar-s/static/media/DeepFake-Detection-Thumbnail.a4cf9c78ca7b49f644ed.png",
+    "static/media/Royals-Web-Thumbnail.png": "/praveenkumar-s/static/media/Royals-Web-Thumbnail.5f9669429daf25a035cc.png",
+    "static/media/Deep-Vision-Thumbnail.png": "/praveenkumar-s/static/media/Deep-Vision-Thumbnail.9869531ae8155b16aaf6.png",
     "static/media/Srinivasan_R.jpg": "/praveenkumar-s/static/media/Srinivasan_R.dca1864ebe85b2cc78df.jpg",
     "static/media/Uma_Maheswari_P.jpg": "/praveenkumar-s/static/media/Uma_Maheswari_P.d6bec6b3245bc780e6c3.jpg",
     "static/media/Audio-Search-Thumbnail.png": "/praveenkumar-s/static/media/Audio-Search-Thumbnail.5776460a1da79d7ec7e8.png",
@@ -28,12 +28,12 @@
     "static/media/Logo_Base.svg": "/praveenkumar-s/static/media/Logo_Base.65e01a92412a95022f2e15e7ba632dce.svg",
     "index.html": "/praveenkumar-s/index.html",
     "static/media/Logo_2.svg": "/praveenkumar-s/static/media/Logo_2.fa01d49d0cecf532c92aed9330edfb19.svg",
-    "main.1a396535.css.map": "/praveenkumar-s/static/css/main.1a396535.css.map",
-    "main.51e7273c.js.map": "/praveenkumar-s/static/js/main.51e7273c.js.map",
+    "main.73ee12a2.css.map": "/praveenkumar-s/static/css/main.73ee12a2.css.map",
+    "main.e715a73f.js.map": "/praveenkumar-s/static/js/main.e715a73f.js.map",
     "453.001b6fa2.chunk.js.map": "/praveenkumar-s/static/js/453.001b6fa2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a396535.css",
-    "static/js/main.51e7273c.js"
+    "static/css/main.73ee12a2.css",
+    "static/js/main.e715a73f.js"
   ]
 }
