@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import ThemeToggle from "../components/ThemeToggle";
 
 function TermsConditions() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="dark:bg-background-dark bg-background-light flex flex-col items-center justify-center px-6 py-8 sm:py-4 lg:px-8">
 
