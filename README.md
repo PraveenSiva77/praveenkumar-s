@@ -1,5 +1,5 @@
 # Praveenkumar S
 
 ## Update Log
-  - Latest Update v1.21
-  - Google Search Console Added
+  - Latest Update v1.22
+  - All Projects Page Added

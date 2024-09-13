@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { ThemeContext } from '../context/ThemeContext';
 import { IoIosArrowBack } from "react-icons/io";
+import GotoButton from '../components/GotoButton';
 
 // Dummy Thumbnail
 import DummyThumbLight from '../assets/Project/ProjectThumb-Light.png';
@@ -62,25 +63,13 @@ function ProjectSingle() {
 
       <div className="bg-background-light dark:bg-background-dark">
         <main className="grid min-h-full place-items-center">
-          <div className='sticky top-0 left-0 right-0 z-50 py-4 px-8 mb-6 flex items-center justify-center w-full bg-background-light dark:bg-background-dark'>
-            <div className=''>
-              <Link 
-                to="/"
-                className='flex items-center justify-center w-max gap-2 font-bold hover:text-primary-light dark:text-text-dark dark:hover:text-secondary-light'>
-                <IoIosArrowBack className='smx:border smx:rounded-full smx:p-1 smx:text-2xl smx:hover:bg-primary-light'/> <span className='smx:hidden'>Go Back</span>
-              </Link>
-            </div>
+        <div className='sticky top-0 left-0 right-0 z-50 py-2 p-8 flex items-center justify-center w-full bg-background-light dark:bg-background-dark'>
+          <GotoButton value="-1"/>
+          <p className='flex items-center justify-center flex-col w-full font-bold text-xl dark:text-primary-light'>{data.title}</p>
+        </div>
 
-            <div className='flex items-center justify-center flex-col w-full'>
-              <h1 className="mb-2 text-xl mdx:text-base mdx:text-center font-bold tracking-tight text-background-dark dark:text-text-dark sm:text-3xl">
-                {data.title}
-              </h1>
-              <span className={`top-2 right-2 px-4 py-[0.1rem] text-xs mdx:text-xs rounded-full text-white ${statusColor(data.status)}`}>{data.status}</span>
-            </div>  
-          </div>
-
-          <div className='relative w-6/12 mdx:w-full'>
-              <img class="rounded-xl aspect-video w-full h-full  shadow border" src={data.image ? data.image : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={`${data.title} Thumbnail`} />
+          <div className='relative w-6/12 mdx:w-full mt-4'>
+              <img class="rounded-xl aspect-video w-full h-full shadow border" src={data.image ? data.image : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={`${data.title} Thumbnail`} />
           </div>
         
           {/* Link Buttons */}

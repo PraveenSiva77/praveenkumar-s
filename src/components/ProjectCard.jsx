@@ -32,7 +32,7 @@ function ProjectCard({keyId, data}) {
 
     <>
         <Link to={`/projectinfo/${keyId}`} state={{ project: data }}>
-            <div key={keyId} class="max-w-sm xxsx:w-[100%] cursor-pointer bg-white dark:bg-transparent p-2 border dark:border-[1.5px] border-gray-300 rounded-2xl hover:shadow-md hover:shadow-primary-light/70 shadow dark:bg-gray-800 dark:border-gray-700">
+            <div key={keyId} class="xxsx:w-[100%] w-full cursor-pointer bg-white dark:bg-transparent p-2 border dark:border-[1.5px] border-gray-300 rounded-2xl hover:shadow-md hover:shadow-primary-light/70 shadow dark:bg-gray-800 dark:border-gray-700">
                 <div className='relative cursor-pointer'>
                     <img class="rounded-xl aspect-video shadow" src={data.image ? data.image : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={data.title} />
                 </div>
