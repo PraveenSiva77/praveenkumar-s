@@ -13,13 +13,15 @@ import Services from './sections/Services';
 import Skills from './sections/Skills';
 import HireMe from './pages/HireMe';
 import ProjectSingle from './pages/ProjectSingle';
+import ProjectsInfo from './pages/ProjectsInfo';
 
 function App() {
   return (
     <Routes >
       <Route index element={<LandingPage />} />
-      <Route path="/projects" element={<Projects />} /> 
-      <Route path="/terms-conditions" element={<TermsConditions />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/projectsinfo" element={<ProjectsInfo/>} />
+      <Route path="/termsandconditions" element={<TermsConditions />} />
       <Route path="/hireme" element={<HireMe/>}/>
       <Route path="/projectinfo/:keyId" element={<ProjectSingle/>}/>
       <Route path="*" element={<NotFound />} />

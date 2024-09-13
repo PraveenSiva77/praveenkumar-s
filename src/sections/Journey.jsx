@@ -18,6 +18,7 @@ function Journey() {
     const filteredData = JourneyData.filter((data) => data.type === selectedFilterType);
 
     return (
+    
         <div id='journey' className='max-w-[1024px] mx-auto py-24 mdx:py-4 lgx:py-4'>
             <PageTitle title="My Journey" description="How I've Evolved in My Career" />
 
@@ -39,6 +40,7 @@ function Journey() {
                 </div>
             </div>
         </div>
+    
     );
 }
 

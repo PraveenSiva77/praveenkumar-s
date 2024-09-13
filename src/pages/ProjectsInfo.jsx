@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 import ThemeToggle from '../components/ThemeToggle'
 import { Helmet } from 'react-helmet'
 
-function HireMe() {
+function ProjectsInfo() {
   return (
     <>
     <Helmet>
-          <link rel="canonical" href="https://PraveenSiva77.github.io/praveenkumar-s/hireme" />
-          <title>Hire Me | Praveenkumar S | AI & Web Developer Portfolio</title>
+          <link rel="canonical" href="https://PraveenSiva77.github.io/praveenkumar-s/projectsinfo" />
+          <title>My Projects | Praveenkumar S | AI & Web Developer Portfolio</title>
           <meta name="description" content="Explore the portfolio of Praveenkumar S, an AI and Web Developer passionate about solving complex problems using technology." />
           <meta property="og:title" content="Praveenkumar S | AI & Web Developer Portfolio" />
           <meta property="og:description" content="Explore projects and learn more about Praveenkumar S, an expert in AI and Web Development." />
-          <meta property="og:url" content="https://PraveenSiva77.github.io/praveenkumar-s/hireme" />
+          <meta property="og:url" content="https://PraveenSiva77.github.io/praveenkumar-s/projectsinfo" />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="%PUBLIC_URL%/Praveenkumar-S-Profile.jpg" />
           <meta name="twitter:card" content="summary_large_image" />
@@ -32,7 +32,7 @@ function HireMe() {
             Oops! This page is currently under construction
             </h1>
             <p className="mt-6 text-base leading-7 text-text-light">
-              Sorry, I am currently working on the <span className='font-semibold'>Hire Me Page</span> for this website.
+              Sorry, I am currently working on the <span className='font-semibold'>Projects Page</span> for this website.
             </p>
             <div className="mt-10 flex mdx:flex-col mdx:gap-6 items-center justify-center gap-x-6">
                 <Link 
@@ -51,4 +51,4 @@ function HireMe() {
   )
 }
 
-export default HireMe
+export default ProjectsInfo
