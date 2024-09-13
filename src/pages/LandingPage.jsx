@@ -14,7 +14,7 @@ function LandingPage() {
   return (
         <>
           <Helmet>
-            <link rel="canonical" href="https://PraveenSiva77.github.io/praveenkumar-s/" />
+            <link rel="canonical" href="https://PraveenSiva77.github.io/praveenkumar-s" />
             <title>Praveenkumar S | AI & Web Developer Portfolio</title>
             <meta name="description" content="Explore the portfolio of Praveenkumar S, an AI and Web Developer passionate about solving complex problems using technology." />
             <meta property="og:title" content="Praveenkumar S | AI & Web Developer Portfolio" />

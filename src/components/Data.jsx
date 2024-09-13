@@ -136,7 +136,7 @@ export const ProfileInfo = [
 
 // Resume Link
 export const ResumeLink = [
-  {name:"Praveenumar-S-DL-Web-Dev-Resume", image: Resume}
+  {name:"https://drive.google.com/file/d/16tlfnzNwKT5T9xoPPdrmDVsQaUVwSMU1/view", image: Resume}
 ]
 
 // Skills Info

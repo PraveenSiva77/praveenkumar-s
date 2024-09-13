@@ -29,7 +29,7 @@ function About() {
                         {description2}
                     </p>
 
-                    <CustomButton button_name="Download CV" button_target={ResumeLink[0].image} button_download={ResumeLink[0].name + `.pdf`} button_icon={<IoDocumentText/>}/>
+                    <CustomButton button_name="Download CV" button_target={ResumeLink[0].name} button_icon={<IoDocumentText/>}/>
                 </div>
             </div>
         </div>
