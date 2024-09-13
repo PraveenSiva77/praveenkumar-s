@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://PraveenSiva77.github.io/praveenkumar-s</loc>
+    <lastmod>2024-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Hire Me Page -->
+  <url>
+    <loc>https://PraveenSiva77.github.io/praveenkumar-s/hireme</loc>
+    <lastmod>2024-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project Page -->
+  <url>
+    <loc>https://PraveenSiva77.github.io/praveenkumar-s/projectinfo</loc>
+    <lastmod>2024-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- T&C Page -->
+  <url>
+    <loc>https://PraveenSiva77.github.io/praveenkumar-s/termsandconditions</loc>
+    <lastmod>2024-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+ 
+</urlset>
