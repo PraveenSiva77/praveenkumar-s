@@ -24,8 +24,8 @@ function Header() {
             href=""
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            {/* <img src={LogoBase} className="w-10" alt="SP Logo" /> */}
-            <span className="self-center text-2xl xsx:hidden font-bold whitespace-nowrap text-text-light dark:text-text-dark">
+            {/* <img src={LogoBase} className="hidden smx:flex w-10" alt="SP Logo" /> */}
+            <span className="self-center text-2xl font-bold whitespace-nowrap text-text-light dark:text-text-dark">
               Mind <span className='text-primary-light'>Sync.</span>
             </span>
           </a>

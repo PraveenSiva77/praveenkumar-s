@@ -67,7 +67,7 @@ function ProjectSingle() {
               <Link 
                 to="/"
                 className='flex items-center justify-center w-max gap-2 font-bold hover:text-primary-light dark:text-text-dark dark:hover:text-secondary-light'>
-                <IoIosArrowBack className='smx:border smx:rounded-full smx:p-1 smx:hover:bg-primary-light'/> <span className='smx:hidden'>Go Back</span>
+                <IoIosArrowBack className='smx:border smx:rounded-full smx:p-1 smx:text-2xl smx:hover:bg-primary-light'/> <span className='smx:hidden'>Go Back</span>
               </Link>
             </div>
 
