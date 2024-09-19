@@ -1,42 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
+import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { SocialIcons, ProfileImage } from './Data';
+import ScrollDownBtn from './ScrollDownBtn';
 import CustomButton from './CustomButton';
 import { ProfileInfo } from './Data';
 
-import { ref, onValue, update } from 'firebase/database';
-import { db } from '../firebase';
-
 function HomeData() {
-
-    const [profile, setProfile] = useState({
-        name: '',
-        description: '',
-        role: '',
-        socialMedia: {
-          whatsapp: '',
-          linkedin: '',
-          instagram: '',
-          github: ''
-        },
-        imageUrl: ''
-      });
-
-      useEffect(() => {
-        const profileRef = ref(db, 'profiles/profileID');  // Replace 'profileID' with actual profile ID
-        onValue(profileRef, (snapshot) => {
-          const data = snapshot.val();
-          if (data) {
-            setProfile(data);
-          }
-        });
-      }, []);
 
     // Extract specific profile information
     const nameInfo = ProfileInfo.find(info => info.title === "Name")?.info;
     const roleInfo = ProfileInfo.find(info => info.title === "Role")?.info;
     const description1 = ProfileInfo.find(info => info.title === "Description 1")?.info;
+
+
   return (
     <div id='home' className='h-[90vh] mdx:h-full dark:bg-gray-900 max-w-[1024px] mx-auto p-4 py-12 my-8 flex flex-col items-center gap-16 mdx:flex-col'>
         <div className="container flex items-center py-20 mdx:py-12 gap-16 mdx:gap-8 mdx:flex-col">
@@ -53,10 +31,10 @@ function HomeData() {
             {/* Profile Description */}
             <div className="description_base mdx:order-2 flex flex-col gap-12 items-start mdx:items-center">
                 <div className='flex flex-col gap-2 items-start mdx:items-center'>
-                    <h1 className='profile_name smx:text-3xl mdx:4xl lgx:text-4xl text-5xl font-bold text-primary-light'>{profile.name}</h1>
-                    <span className='profile_role ml-1 mdx:ml-0 text-2xl smx:text-xl font-normal text-gray-700 dark:text-text-dark'>{profile.role}</span>
+                    <h1 className='profile_name smx:text-3xl mdx:4xl lgx:text-4xl text-5xl font-bold text-primary-light'>{nameInfo}</h1>
+                    <span className='profile_role ml-1 mdx:ml-0 text-2xl smx:text-xl font-normal text-gray-700 dark:text-text-dark'>{roleInfo}</span>
                 </div>
-                <p className='profile_description mdx:text-center text-gray-700 dark:text-text-dark leading-relaxed'>{profile.description}</p>
+                <p className='profile_description mdx:text-center text-gray-700 dark:text-text-dark leading-relaxed'>{description1}</p>
 
                 <CustomButton button_name="Say Hello!" button_icon={<RiSendPlaneFill/>} button_target="#contact"/>
             </div>
