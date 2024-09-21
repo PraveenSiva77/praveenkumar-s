@@ -1,7 +1,7 @@
 # Praveenkumar S
 
 ## Update Log
-  - Latest Update v1.31
+  - Latest Update v1.32
   - Firebase Connected
   - OG Image Updated
   - Meta Tags Updated
