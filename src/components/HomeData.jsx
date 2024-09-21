@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import { RiSendPlaneFill } from "react-icons/ri";
-import { SocialIcons, ProfileImage } from './Data';
 import CustomButton from './CustomButton';
+import ProfilePic from '../assets/Praveenkumar-S-Profile.webp';
 import { ProfileInfo } from './Data';
 import { FaWhatsapp, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
@@ -95,12 +95,10 @@ function HomeData() {
 
             {/* Profile Image */}
             <div className="profile_base">
-            {profile.imageUrl && profile.imageUrl !== '' &&
                 <img 
-                src={profile.imageUrl}
+                src={profile.imageUrl ? profile.imageUrl : ProfilePic}
                 alt={`${profile.name}'s profile`}
                 className='profile_image max-w-[350px] lgx:w-[300px] mdx:w-[250px] smx:w-[80vw] border-indigo-500 border-[0.5rem]'/>
-            }
             </div>
         </div>
         
