@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/praveenkumar-s/static/css/main.3c21902e.css",
-    "main.js": "/praveenkumar-s/static/js/main.404aae61.js",
+    "main.js": "/praveenkumar-s/static/js/main.e2176241.js",
     "static/js/453.001b6fa2.chunk.js": "/praveenkumar-s/static/js/453.001b6fa2.chunk.js",
     "static/media/Praveenkumar_S.jpg": "/praveenkumar-s/static/media/Praveenkumar_S.bc466f0248bb32a5d7cf.jpg",
     "static/media/Sibi_Siddharth_S.jpg": "/praveenkumar-s/static/media/Sibi_Siddharth_S.5bcc004736442094e053.jpg",
     "static/media/Profile-Image.jpg": "/praveenkumar-s/static/media/Profile-Image.a86e187f81fed132ed06.jpg",
     "static/media/Ecommerce Website Thumnail.png": "/praveenkumar-s/static/media/Ecommerce Website Thumnail.460c0f3788d7b870c80a.png",
+    "static/media/Praveenkumar-S-Profile.webp": "/praveenkumar-s/static/media/Praveenkumar-S-Profile.c69e0cbba7b76a3fb992.webp",
     "static/media/Varunah 2k24 Thumbnail.png": "/praveenkumar-s/static/media/Varunah 2k24 Thumbnail.e53ff11772bf7270dc19.png",
     "static/media/Surya_B.jpg": "/praveenkumar-s/static/media/Surya_B.6639171967680f6cf8b6.jpg",
     "static/media/Praveenkumar_S_DL_AI_Dev_Resume.pdf": "/praveenkumar-s/static/media/Praveenkumar_S_DL_AI_Dev_Resume.371a46c41fc711230e67.pdf",
@@ -29,11 +30,11 @@
     "static/media/Logo_Base.svg": "/praveenkumar-s/static/media/Logo_Base.65e01a92412a95022f2e15e7ba632dce.svg",
     "static/media/Logo_2.svg": "/praveenkumar-s/static/media/Logo_2.fa01d49d0cecf532c92aed9330edfb19.svg",
     "main.3c21902e.css.map": "/praveenkumar-s/static/css/main.3c21902e.css.map",
-    "main.404aae61.js.map": "/praveenkumar-s/static/js/main.404aae61.js.map",
+    "main.e2176241.js.map": "/praveenkumar-s/static/js/main.e2176241.js.map",
     "453.001b6fa2.chunk.js.map": "/praveenkumar-s/static/js/453.001b6fa2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c21902e.css",
-    "static/js/main.404aae61.js"
+    "static/js/main.e2176241.js"
   ]
 }
