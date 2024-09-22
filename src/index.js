@@ -9,7 +9,7 @@ import { ThemeProvider } from './context/ThemeContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter basename='/praveenkumar-s'>
+    <HashRouter>
       <ThemeProvider>
         <div className='dark:bg-gray-900'>
           <App />
