@@ -32,12 +32,4 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Single Project Page -->
-  <url>
-    <loc>https://praveensiva77.github.io/praveenkumar-s/#/projectinfo/:keyId</loc>
-    <lastmod>2024-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
- 
 </urlset>
