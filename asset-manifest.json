@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/praveenkumar-s/static/css/main.3c21902e.css",
-    "main.js": "/praveenkumar-s/static/js/main.4762c208.js",
+    "main.js": "/praveenkumar-s/static/js/main.cbb778af.js",
     "static/js/453.001b6fa2.chunk.js": "/praveenkumar-s/static/js/453.001b6fa2.chunk.js",
     "static/media/Praveenkumar_S.jpg": "/praveenkumar-s/static/media/Praveenkumar_S.bc466f0248bb32a5d7cf.jpg",
     "static/media/Sibi_Siddharth_S.jpg": "/praveenkumar-s/static/media/Sibi_Siddharth_S.5bcc004736442094e053.jpg",
@@ -30,11 +30,11 @@
     "static/media/Logo_Base.svg": "/praveenkumar-s/static/media/Logo_Base.65e01a92412a95022f2e15e7ba632dce.svg",
     "static/media/Logo_2.svg": "/praveenkumar-s/static/media/Logo_2.fa01d49d0cecf532c92aed9330edfb19.svg",
     "main.3c21902e.css.map": "/praveenkumar-s/static/css/main.3c21902e.css.map",
-    "main.4762c208.js.map": "/praveenkumar-s/static/js/main.4762c208.js.map",
+    "main.cbb778af.js.map": "/praveenkumar-s/static/js/main.cbb778af.js.map",
     "453.001b6fa2.chunk.js.map": "/praveenkumar-s/static/js/453.001b6fa2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c21902e.css",
-    "static/js/main.4762c208.js"
+    "static/js/main.cbb778af.js"
   ]
 }
