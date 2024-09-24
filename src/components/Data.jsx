@@ -277,9 +277,9 @@ export const ProjectData = [
     status: "Working",
     type: "Deep Learning",
     tags: "CNN, LSTM, GAN, ReactJS, Flask, Tensorflow, PyTorch, OpenCV",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos aspernatur sit laborum earum, excepturi nihil laboriosam voluptatum, vel adipisci nesciunt iusto illo praesentium corporis error deleniti perferendis recusandae sapiente.",
-    githubLink:"https://github.com/PraveenSiva77/",
-    demoLink: "https://github.com/PraveenSiva77/",
+    description: "Deep Fake Detection is an AI-driven project designed to detect and combat manipulated media, focusing on distinguishing real content from AI-generated deep fakes. By leveraging advanced machine learning techniques and cutting-edge image analysis algorithms, the project aims to identify and mitigate the risks posed by deep fake videos and images. This technology is essential for maintaining the authenticity of digital media and combating misinformation in areas such as media, security, and social networks.",
+    githubLink:"https://github.com/saisurya7860/SIH--FACEINTUIT",
+    demoLink: "https://faceintuit.netlify.app/",
     role: "Python & Web Developer",
     members: [
       {
@@ -317,8 +317,8 @@ export const ProjectData = [
     duration: "Jul 2024 - Aug 2024",
     status: "Completed",
     type: "Deep Learning",
-    tags: "Machine Learning, Data Science, Artificial Intelligence, React.Js, Chatbot",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos aspernatur sit laborum earum, excepturi nihil laboriosam voluptatum, vel adipisci nesciunt iusto illo praesentium corporis error deleniti perferendis recusandae sapiente.",
+    tags: "AudioSearch, MachineLearning, ReactJS, Python, AudioTagging, LanceDB, ESC50Dataset",
+    description: "The Similar Audio Search project is an innovative solution designed to find audio clips similar to a given sound using cutting-edge technology. By leveraging the ESC-50 dataset and the AudioTagging model from panns_inference, the system generates unique audio embeddings stored in LanceDB, a database built for efficient large-scale vector data handling. This enables fast and accurate search results. The React-based frontend allows users to input audio samples and retrieve the top 5 similar clips, complete with playback and category details. Ideal for music recommendation systems and sound identification applications, this project seamlessly integrates React, Python, and LanceDB for an interactive and efficient audio search experience.",
     githubLink:"https://github.com/PraveenSiva77/",
     demoLink: null,
     role: "Python & Web Developer",
@@ -343,42 +343,16 @@ export const ProjectData = [
 
 
   {
-    title: "E-Commerce",
-    image: EcommerceWebsite, 
-    duration: "Jul 2024 - Waiting",
-    status: "Waiting",
-    type: "Web",
-    tags: "Machine Learning, Data Science, Artificial Intelligence, React.Js, Chatbot",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos aspernatur sit laborum earum, excepturi nihil laboriosam voluptatum, vel adipisci nesciunt iusto illo praesentium corporis error deleniti perferendis recusandae sapiente.",
-    githubLink:"https://github.com/PraveenSiva77/",
-    demoLink: null,
-    role: "Python & Web Developer",
-    members: [
-      {
-        name: "Praveenkumar S",
-        image: Praveen_Img,
-        role: "Web Developer", 
-      },
-      {
-        name: "Sibi Siddharth S",
-        image: Sibi_img,
-        role: "Web Developer",
-      },
-    ],
-  },
-
-
-  {
     title: "Royal Connect",
     image: RoyalsConnect, 
     duration: "Jun 2024 - Jul 2024",
     status: "Completed",
-    type: "Web",
-    tags: "Machine Learning, Data Science, Artificial Intelligence, React.Js, Chatbot",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos aspernatur sit laborum earum, excepturi nihil laboriosam voluptatum, vel adipisci nesciunt iusto illo praesentium corporis error deleniti perferendis recusandae sapiente.",
-    githubLink:"https://github.com/PraveenSiva77/",
-    demoLink: null,
-    role: "Python & Web Developer",
+    type: "Web Development",
+    tags: "HTML, CSS, JavaScript, ReactJS, React Bootstrap, Figma, Responsive",
+    description: "RoyalConnect2k24 is the official website for the Rotaract Club of Coimbatore Royals, developed with a focus on delivering a responsive and engaging user experience. Built using ReactJS, HTML, CSS, JavaScript, and React Bootstrap, the site ensures seamless functionality across all devices. The UI design, created with Figma, highlights a modern and visually cohesive interface, enhancing user interaction. RoyalConnect2k24 serves as a central hub for club members and events, providing information, updates, and a platform for community engagement.",
+    githubLink:"https://github.com/sibisiddharth8/RoyalConnect2k24.git",
+    demoLink: "https://sibisiddharth8.github.io/RoyalConnect2k24/",
+    role: "Web Developer",
     members: [
       {
         name: "Praveenkumar S",
@@ -400,11 +374,11 @@ export const ProjectData = [
     duration: "Apr 2024 - May 2024",
     status: "Completed",
     type: "Deep Learning",
-    tags: "Machine Learning, Data Science, Artificial Intelligence, React.Js, Chatbot",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos aspernatur sit laborum earum, excepturi nihil laboriosam voluptatum, vel adipisci nesciunt iusto illo praesentium corporis error deleniti perferendis recusandae sapiente.",
-    githubLink:"https://github.com/PraveenSiva77/",
+    tags: "Python, TensorFlow, Keras, ESRGAN, GAN, HTML, CSS, Flask",
+    description: "VisionSoC is an advanced image upscaling model developed with Enhanced Super Resolution Generative Adversarial Networks (ESRGAN), built using Python alongside TensorFlow and Keras. This innovative solution enhances low-resolution images with stunning detail and clarity, making it ideal for applications such as digital photography, medical imaging, and video processing. The comprehensive web-based application, crafted using HTML, CSS, and JavaScript, is seamlessly integrated with a Flask backend, ensuring a smooth user experience across platforms. VisionSoC represents a cutting-edge approach to image enhancement technology.",
+    githubLink:"https://github.com/sibisiddharth8/VisionSoC.git",
     demoLink: null,
-    role: "Python & Web Developer",
+    role: "Python & Frontend Developer",
     members: [
       {
         name: "Praveenkumar S",
@@ -441,11 +415,11 @@ export const ProjectData = [
     duration: "Feb 2024 - Mar 2024",
     status: "Completed",
     type: "Web",
-    tags: "Machine Learning, Data Science, Artificial Intelligence, React.Js, Chatbot",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos aspernatur sit laborum earum, excepturi nihil laboriosam voluptatum, vel adipisci nesciunt iusto illo praesentium corporis error deleniti perferendis recusandae sapiente.",
-    githubLink:"https://github.com/PraveenSiva77/",
-    demoLink: null,
-    role: "Python & Web Developer",
+    tags: "HTML, CSS, JavaScript, Bootstrap, Google Forms, Canva, UI/UX Designing",
+    description: "Varunah2k24 is the official website for Kathir College of Engineering's prestigious national-level technical symposium. Developed with a focus on performance and responsiveness, the website was built using HTML, CSS, JavaScript, Bootstrap, and Ajax to ensure seamless functionality on both desktop and mobile platforms. Along with the website, event posters and designs were crafted using Canva, providing a cohesive visual identity. Varunah2k24 is an essential platform for event registrations, schedules, and updates, enhancing the overall user experience for participants.",
+    githubLink:"https://github.com/sibisiddharth08/varunahkce.git",
+    demoLink: "https://varunahkce.netlify.app/",
+    role: "Frontend Developer",
     members: [
       {
         name: "Praveenkumar S",
@@ -467,9 +441,9 @@ export const ProjectData = [
     duration: "Mar 2023 - May 2023",
     status: "Completed",
     type: "Machine Learning",
-    tags: "Machine Learning, React.Js, Artificial Intelligence, Chatbot, Natural Language Processing",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dignissimos aspernatur sit laborum earum, excepturi nihil laboriosam voluptatum, vel adipisci nesciunt iusto illo praesentium corporis error deleniti perferendis recusandae sapiente.",
-    githubLink:"https://github.com/PraveenSiva77/",
+    tags: "Machine Learning, HTML, CSS, NLP, Artificial Intelligence, Chatbot, Open AI",
+    description: "ChatSoC is an advanced AI-powered chatbot leveraging OpenAI's API in Python to provide a comprehensive interactive experience. Equipped with cutting-edge features like text-to-voice output, voice-to-text input, a secure QR login mechanism utilizing OpenCV, AI image generation through DALL-E, and the ability to download YouTube videos and reference Wikipedia content, ChatSoC stands as an innovative tool for dynamic user engagement. This versatile chatbot caters to a variety of use cases, from educational tools to interactive customer support systems.",
+    githubLink:"https://github.com/sibisiddharth8/ChatSoC.git",
     demoLink: null,
     role: "Python & Web Developer",
     members: [
