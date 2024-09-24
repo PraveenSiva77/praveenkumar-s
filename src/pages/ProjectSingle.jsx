@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
 import ThemeToggle from '../components/ThemeToggle'
 import { MdAccessTime } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
@@ -11,7 +12,13 @@ import GotoButton from '../components/GotoButton';
 // Dummy Thumbnail
 import DummyThumbLight from '../assets/Project/ProjectThumb-Light.png';
 import DummyThumbDark from '../assets/Project/ProjectThumb-Dark.png';
-import { Helmet } from 'react-helmet';
+
+// Format as 'Aug 2024'
+const formatDate = (date) => {
+  if (!date) return ''; 
+  const options = { year: 'numeric', month: 'short' };
+  return new Date(date).toLocaleDateString('en-US', options); 
+};
 
 function ProjectSingle() {
 
@@ -22,9 +29,8 @@ function ProjectSingle() {
   });
 
   const location = useLocation();
-  const {project: data} = location.state;
+  const {project: data, collaborators: projectCollaborators} = location.state;
 
-  const membersList = data.members;
   const tagArray = data.tags.split(',').map(tag => tag.trim());
 
   // The statusColor function
@@ -37,7 +43,7 @@ function ProjectSingle() {
         case "Waiting":
             return 'bg-red-500';
         default:
-            return 'bg-gray-500'; // Default color if status doesn't match any case
+            return 'bg-gray-500'; // Default color 
     }
   };
 
@@ -69,7 +75,7 @@ function ProjectSingle() {
         </div>
 
           <div className='relative w-6/12 mdx:w-full mt-4'>
-              <img class="rounded-xl aspect-video w-full h-full shadow border" src={data.image ? data.image : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={`${data.title} Thumbnail`} />
+              <img class="rounded-xl aspect-video w-full h-full shadow border" src={data.imageUrl ? data.imageUrl : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={`${data.title} Thumbnail`} />
           </div>
         
           {/* Link Buttons */}
@@ -95,7 +101,11 @@ function ProjectSingle() {
           </div>
 
           {/* Duration */}
-          <p className='dark:text-text-dark flex items-center justify-center gap-2 mt-8'><MdAccessTime/> {data.duration}</p>
+          <p 
+            className='dark:text-text-dark flex items-center justify-center gap-2 mt-8'>
+            <MdAccessTime/> 
+            {data.startDate == null & data.endDate == null ? "Nil" : `${formatDate(data.startDate)} - ${data.endDate == '' ? "Present" : formatDate(data.endDate)}`}
+            </p>
 
           {/* Description */}
           <div className="text-center flex flex-col items-center">
@@ -109,9 +119,9 @@ function ProjectSingle() {
             <h1 className='text-xl dark:text-text-dark font-semibold text-center rounded-full underline py-1'>Contributors </h1>
 
             <div className='flex flex-wrap justify-center gap-4 mt-8'>
-              {membersList.map((member, index) => (
+              {projectCollaborators.map((member, index) => (
                 <div key={index} className='flex items-center justify-start smx:w-full gap-4 text-center rounded-lg bg-accent-light dark:bg-transparent dark:border dark:border-dashed dark:border-primary-light pl-4 pr-6 py-2'>
-                  <img src={member.image} alt={member.name} className='w-10 h-10 rounded-full ring-offset-2 dark:ring-offset-0 ring-1 ring-primary-light dark:bg-transparent'/>
+                  <img src={member.imageUrl} alt={member.name} className='w-10 h-10 rounded-full ring-offset-2 dark:ring-offset-0 ring-1 ring-primary-light dark:bg-transparent'/>
 
                   <div className='flex flex-col'>
                     <h1 className='text-start font-semibold mdx:text-sm smx:text-xs dark:text-text-dark'>{member.name}</h1>

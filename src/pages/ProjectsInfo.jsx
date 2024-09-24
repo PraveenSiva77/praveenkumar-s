@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 import ProjectCard from '../components/ProjectCard';
@@ -6,10 +6,39 @@ import { ProjectData } from '../components/Data';
 import { Link } from 'react-router-dom'
 import ThemeToggle from '../components/ThemeToggle'
 import { Helmet } from 'react-helmet'
-
 import GotoButton from '../components/GotoButton';
 
+// Firebase setup
+import {ref, onValue } from "firebase/database";
+import { db } from "../firebase";
+
+
 function ProjectsInfo() {
+  
+  const [projects, setProjects] = useState([]);
+  const [collaborators, setCollaborators] = useState([]);
+  
+  // Fetch Projects
+  useEffect(() => {
+    const projectsRef = ref(db, 'projects');
+    onValue(projectsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        setProjects(Object.keys(data).map((key) => ({ id: key, ...data[key] })));
+      }
+    });
+  }, []);
+  
+  // Fetch Collaborators
+  useEffect(() => {
+    const collaboratorsRef = ref(db, 'collaborators');
+    onValue(collaboratorsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        setCollaborators(Object.keys(data).map((key) => ({ id: key, ...data[key] })));
+      }
+    });
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0,0);
@@ -43,12 +72,14 @@ function ProjectsInfo() {
         </div>
 
         <div className="grid grid-cols-3 gap-8 mdx:grid-cols-1 lgx:grid-cols-2 lgx:w-[90vw] mx-auto smx:gap-8 py-12 smx:py-8 justify-items-center">
-            {ProjectData.map((project, index) => (
-                <ProjectCard
-                keyId={index}
-                data={project}
-                />
-            ))}
+          {/* Display All projects */}
+          {projects.map((project, index) => (
+            <ProjectCard
+              keyId={index}
+              data={project}
+              collaborators={collaborators}
+            />
+          ))}
         </div>
       </div>
         

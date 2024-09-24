@@ -5,6 +5,7 @@ import CustomButton from './CustomButton';
 import ProfilePic from '../assets/Praveenkumar-S-Profile.webp';
 import { ProfileInfo } from './Data';
 import { FaWhatsapp, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 // Firebase setup
 import {ref, onValue } from "firebase/database";
@@ -90,7 +91,13 @@ function HomeData() {
                     {profile.description ? profile.description : description}
                 </p>
 
-                <CustomButton button_name="Say Hello!" button_icon={<RiSendPlaneFill/>} button_target="#contact"/>
+                <Link
+                    to="contact"
+                    className="cursor-pointer px-8 py-4 flex items-center justify-between gap-2 dark:border-2 dark:border-primary-light dark:bg-transparent dark:hover:bg-primary-light text-white bg-gray-700 hover:bg-blue-700 font-bold w-max rounded-xl"
+                >
+                  Say Hello!
+                  <RiSendPlaneFill/>
+                </Link>
             </div>
 
             {/* Profile Image */}
