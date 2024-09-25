@@ -105,7 +105,7 @@ function HomeData() {
                 <img 
                 src={profile.imageUrl ? profile.imageUrl : ProfilePic}
                 alt={`${profile.name}'s profile`}
-                className='profile_image max-w-[350px] lgx:w-[300px] mdx:w-[250px] smx:w-[80vw] border-indigo-500 border-[0.5rem]'/>
+                className='profile_image max-w-[350px] max-h-[350px] lgx:w-[300px] lgx:h-[300px] mdx:w-[250px] mdx:h-[250px] smx:w-[80vw] smx:h-[80vw] aspect-square border-indigo-500 border-[0.5rem]'/>
             </div>
         </div>
         

@@ -66,9 +66,9 @@ function ProjectsInfo() {
     
       <div className='max-w-[1024px] mx-auto py-20'>
 
-        <div className='fixed top-0 left-0 right-0 z-50 py-2 p-8 flex items-center justify-center w-full bg-background-light dark:bg-background-dark'>
+        <div className='fixed w-full top-0 left-0 right-0 z-50 py-2 p-8 flex items-center justify-between bg-background-light dark:bg-background-dark'>
           <GotoButton value="-1"/>
-          <p className='flex items-center justify-center flex-col w-full font-bold text-xl dark:text-primary-light'>My Projects</p>
+          <p className='flex items-center justify-center flex-col w-full font-bold text-xl dark:text-primary-light absolute l-[50%] translate-x-[-3%]'>My Projects</p>
         </div>
 
         <div className="grid grid-cols-3 gap-8 mdx:grid-cols-1 lgx:grid-cols-2 lgx:w-[90vw] mx-auto smx:gap-8 py-12 smx:py-8 justify-items-center">

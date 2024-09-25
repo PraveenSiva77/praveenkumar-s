@@ -1,8 +1,14 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 
 function Contact() {
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
 
   return (
 
@@ -28,11 +34,28 @@ function Contact() {
             
             <div class="flex items-start my-5">
               <div class="flex items-center h-5">
-                <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                <input 
+                id="terms" 
+                type="checkbox" 
+                value="" 
+                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" 
+                required 
+                onChange={handleCheckboxChange}
+                />
               </div>
               <label for="terms" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <Link to="/termsandconditions" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</Link></label>
             </div>
-            <button type="submit" class="text-white w-[50%] smx:w-[70%] bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send</button>
+            
+            <button
+              type="submit"
+              className={`text-white w-[50%] smx:w-[70%] font-medium rounded-lg text-sm px-5 py-2.5 text-center 
+                ${isChecked
+                  ? 'bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                  : 'bg-blue-300 cursor-not-allowed'}`}
+              disabled={!isChecked}
+            >
+              Send
+            </button>
           </form>
 
         </div>
