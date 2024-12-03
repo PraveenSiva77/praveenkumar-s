@@ -2,51 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 import ProjectCard from '../components/ProjectCard';
-import { ProjectData } from '../components/Data';
-import { Link } from 'react-router-dom'
-import ThemeToggle from '../components/ThemeToggle'
-import { Helmet } from 'react-helmet'
+import { projectData, collaboratorsData } from '../components/Data';
+import { Link } from 'react-router-dom';
+import ThemeToggle from '../components/ThemeToggle';
+import { Helmet } from 'react-helmet';
 import GotoButton from '../components/GotoButton';
 
-// Firebase setup
-import {ref, onValue } from "firebase/database";
-import { db } from "../firebase";
-
-
 function ProjectsInfo() {
+  const [projects, setProjects] = useState(projectData); 
+  const [collaboratorsList, setCollaborators] = useState(collaboratorsData);
   
-  const [projects, setProjects] = useState([]);
-  const [collaborators, setCollaborators] = useState([]);
-  
-  // Fetch Projects
   useEffect(() => {
-    const projectsRef = ref(db, 'projects');
-    onValue(projectsRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        setProjects(Object.keys(data).map((key) => ({ id: key, ...data[key] })));
-      }
-    });
+    window.scrollTo(0, 0); // Scroll to top when the page loads
   }, []);
-  
-  // Fetch Collaborators
-  useEffect(() => {
-    const collaboratorsRef = ref(db, 'collaborators');
-    onValue(collaboratorsRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        setCollaborators(Object.keys(data).map((key) => ({ id: key, ...data[key] })));
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    window.scrollTo(0,0);
-  });
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <link rel="canonical" href="https://PraveenSiva77.github.io/praveenkumar-s/projectsinfo" />
         <title>My Projects | Praveenkumar S | AI & Web Developer Portfolio</title>
         <meta name="description" content="Explore the portfolio of Praveenkumar S, an AI and Web Developer passionate about solving complex problems using technology." />
@@ -63,29 +35,27 @@ function ProjectsInfo() {
         <meta name="author" content="Praveenkumar S" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Helmet>
-    
-      <div className='max-w-[1024px] mx-auto py-20'>
 
-        <div className='fixed w-full top-0 left-0 right-0 z-50 py-2 p-8 flex items-center justify-between bg-background-light dark:bg-background-dark'>
-          <GotoButton value="-1"/>
-          <p className='flex items-center justify-center flex-col w-full font-bold text-xl dark:text-primary-light absolute l-[50%] translate-x-[-3%]'>My Projects</p>
+      <div className="max-w-[1024px] mx-auto py-20">
+        {/* Sticky Header */}
+        <div className="fixed w-full top-0 left-0 right-0 z-50 py-2 px-8 flex items-center justify-between bg-background-light dark:bg-background-dark">
+          <GotoButton value="-1" />
+          <p className="flex items-center justify-center flex-col w-full font-bold text-xl dark:text-primary-light absolute left-[50%] translate-x-[-50%]">
+            My Projects
+          </p>
         </div>
 
+        {/* Project Cards */}
         <div className="grid grid-cols-3 gap-8 mdx:grid-cols-1 lgx:grid-cols-2 lgx:w-[90vw] mx-auto smx:gap-8 py-12 smx:py-8 justify-items-center">
-          {/* Display All projects */}
           {projects.map((project, index) => (
-            <ProjectCard
-              keyId={index}
-              data={project}
-              collaborators={collaborators}
-            />
+            <ProjectCard key={index} data={project} collaborators={collaboratorsList} />
           ))}
         </div>
       </div>
-        
-      <ThemeToggle/>
+
+      <ThemeToggle />
     </>
-  )
+  );
 }
 
-export default ProjectsInfo
+export default ProjectsInfo;

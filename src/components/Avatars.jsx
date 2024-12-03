@@ -7,7 +7,7 @@ function Avatars({ avatarList = [] }) {
   }
 
   return (
-    <div className="flex p-2 -space-x-2 overflow-hidden">
+    <div className="flex p-2 pl-1 -space-x-2 overflow-hidden">
       {avatarList.length > 0 ? (
         avatarList.map((data, index) => (
           <img 

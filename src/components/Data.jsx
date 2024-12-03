@@ -16,6 +16,23 @@ import TBT_Logo from '../assets/Journey_Images/TBT_Logo.png';
 import SHHSS_Logo from '../assets/Journey_Images/SHHSS_Logo.png';
 import KCE_Logo from '../assets/Journey_Images/KCE_Logo.png';
 
+// Import Team Members
+import Praveen_Img from '../assets/Team/Praveenkumar_S.jpg';
+import Sibi_Img from '../assets/Team/Sibi_Siddharth_S.jpg'
+import Srini_Img from '../assets/Team/Srinivasan_R.jpg';
+import Arivu_Img from '../assets/Team/Arivumani_A.jpg';
+import Surya_Img from '../assets/Team/Surya_B.jpg';
+import Uma_Img from '../assets/Team/Uma_Maheswari_P.jpg';
+
+// Project Thumbnail
+import Imaginoir_Thumbnail from "../assets/Project/ProjectThumb-Light.png";
+import RoyalConnect_Thumbnail from "../assets/Project/Royals-Web-Thumbnail.png";
+import Similar_Audio_Thumbnail from "../assets/Project/Audio-Search-Thumbnail.png";
+import Deep_Vision_Thumbnail from "../assets/Project/DeepFake-Detection-Thumbnail.png";
+import Varunah_Thumbnail from "../assets/Project/Varunah 2k24 Thumbnail.png";
+import Portfolio_Thumbnail from "../assets/Project/ProjectThumb-Light.png";
+import Chat_SoC_Thumbnail from "../assets/Project/Chat SoC Thumbnail.png";
+
 // Skills SVG
 import {
   HtmlLogo,
@@ -52,9 +69,6 @@ import {
   GitLogo,
   CanvaLogo,
 } from "../assets/SVG/Logos";
-
-
-
 
 // Header Link Data
 export const HeaderData = [
@@ -248,4 +262,138 @@ export const JourneyData =[
 
 ];
 
+// Project Data
 
+export const collaboratorsData = [
+  {
+    id: 1,
+    name: "Praveenkumar S",
+    role: "AI/ML & Web Developer",
+    imageUrl: Praveen_Img,
+  },
+  {
+    id: 2,
+    name: "Sibi Siddarth S",
+    role: "AI/ML & Web Developer",
+    imageUrl: Sibi_Img,
+  },
+  {
+    id: 3,
+    name: "Srinivasan R",
+    role: "AI/ML Developer",
+    imageUrl: Srini_Img,
+  },
+  {
+    id: 4,
+    name: "Arivumani A",
+    role: "AI/ML Developer",
+    imageUrl: Arivu_Img,
+  },
+  {
+    id: 5,
+    name: "Surya B",
+    role: "AI/ML Developer",
+    imageUrl: Surya_Img,
+  },
+  {
+    id: 6,
+    name: "Uma Maheswari P",
+    role: "ML Developer",
+    imageUrl: Uma_Img,
+  }
+];
+
+export const projectData = [
+  {
+    id: "1",
+    title: "Imaginoir Portal",
+    description: "A portal designed for creative professionals to showcase their work, collaborate with others, and build their personal brand.",
+    image: Imaginoir_Thumbnail,
+    start_date: "Nov 2024",
+    end_date: "Present",
+    collaborators: [1, 2], 
+    status: "In Progress",
+    githubLink: "https://github.com/your-repository",
+    demoLink: "https://your-demo-link.com",
+    tags: "Web Development, UI Design",
+  },
+  {
+    id: "2",
+    title: "Royal Connect",
+    description: "A social networking platform for Rotaract members to connect, collaborate, and organize events.",
+    image: RoyalConnect_Thumbnail,
+    start_date: "Jun 2024",
+    end_date: "Present",
+    collaborators: [1, 3], 
+    status: "In Progress",
+    githubLink: "https://github.com/your-repository",
+    demoLink: "https://your-demo-link.com",
+    tags: "Web Development, Social Networking",
+  },
+  {
+    id: "3",
+    title: "Similar Audio Search",
+    description: "A project to implement audio fingerprinting for finding similar audio files based on content analysis.",
+    image: Similar_Audio_Thumbnail,
+    start_date: "Jun 2024",
+    end_date: "Aug 2024",
+    collaborators: [1, 4], 
+    status: "Completed",
+    githubLink: "https://github.com/your-repository",
+    demoLink: "https://your-demo-link.com",
+    tags: "Audio Processing, Python",
+  },
+  {
+    id: "4",
+    title: "Deep Vision",
+    description: "Deep learning model for image enhancement and restoration to improve image quality.",
+    image: Deep_Vision_Thumbnail,
+    start_date: "Mar 2024",
+    end_date: "Apr 2024",
+    collaborators: [1, 5], 
+    status: "Completed",
+    githubLink: "https://github.com/your-repository",
+    demoLink: "https://your-demo-link.com",
+    tags: "Deep Learning, Image Processing",
+  },
+  {
+    id: "5",
+    title: "Varunah",
+    description: "A responsive event hosting website with features for event registration, user authentication, and live updates.",
+    image: Varunah_Thumbnail,
+    start_date: "Mar 2024",
+    end_date: "Apr 2024",
+    collaborators: [1, 6], 
+    status: "Completed",
+    githubLink: "https://github.com/your-repository",
+    demoLink: "https://your-demo-link.com",
+    tags: "Web Development, UI/UX",
+  },
+  {
+    id: "6",
+    title: "Imaginoir Portfolio",
+    description: "A portfolio website for showcasing a collection of creative projects and personal achievements.",
+    image: Portfolio_Thumbnail,
+    start_date: "Apr 2024",
+    end_date: "May 2024",
+    collaborators: [1],
+    status: "Completed",
+    githubLink: "https://github.com/your-repository",
+    demoLink: "https://your-demo-link.com",
+    tags: "Web Development, Personal Branding",
+  },
+  {
+    id: "7",
+    title: "Chat SoC",
+    description: "An AI-based chatbot system designed for smart conversations and assistance in various domains.",
+    image: Chat_SoC_Thumbnail,
+    start_date: "Mar 2023",
+    end_date: "Apr 2023",
+    collaborators: [1, 2], 
+    status: "Completed",
+    githubLink: "https://github.com/your-repository",
+    demoLink: "https://your-demo-link.com",
+    tags: "AI, Chatbot, Python",
+  },
+
+];

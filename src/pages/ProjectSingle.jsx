@@ -75,7 +75,7 @@ function ProjectSingle() {
         </div>
 
           <div className='relative w-6/12 mdx:w-full mt-4'>
-              <img class="rounded-xl aspect-video w-full h-full shadow border" src={data.imageUrl ? data.imageUrl : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={`${data.title} Thumbnail`} />
+              <img class="rounded-xl aspect-video w-full h-full shadow border" src={data.image ? data.image : (theme === 'dark' ? DummyThumbDark : DummyThumbLight)} alt={`${data.title} Thumbnail`} />
           </div>
         
           {/* Link Buttons */}
@@ -104,7 +104,7 @@ function ProjectSingle() {
           <p 
             className='dark:text-text-dark flex items-center justify-center gap-2 mt-8'>
             <MdAccessTime/> 
-            {data.startDate == null & data.endDate == null ? "Nil" : `${formatDate(data.startDate)} - ${data.endDate == '' ? "Present" : formatDate(data.endDate)}`}
+            {data.start_date == null & data.end_date == null ? "Nil" : `${formatDate(data.start_date)} - ${data.end_date == '' ? "Present" : formatDate(data.end_date)}`}
             </p>
 
           {/* Description */}
