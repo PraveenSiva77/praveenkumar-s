@@ -83,7 +83,6 @@ export async function sendContact(
         method: "POST",
         headers,
         body: JSON.stringify(data),
-        credentials: "include",
     });
     const resData = await res.json().catch(() => ({}));
     if (!res.ok) {

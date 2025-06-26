@@ -12,4 +12,13 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://api.praveensiva.me',
+        changeOrigin: true,
+        secure: true,
+      }
+    }
+  }
 })
