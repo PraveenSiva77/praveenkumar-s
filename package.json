@@ -7,15 +7,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "copy-cname": "cpy CNAME dist",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && npm run copy-cname",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
     "autoprefixer": "^10.4.21",
     "chart.js": "^4.5.0",
+    "cpy-cli": "^5.0.0",
     "lucide-react": "^0.522.0",
     "path": "^0.12.7",
     "postcss": "^8.5.6",
