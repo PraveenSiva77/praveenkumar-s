@@ -1,4 +1,4 @@
-import { Component, ReactNode } from "react";
+import { Component } from "react";
 
 export interface ILoading {
     [key: string]: any;

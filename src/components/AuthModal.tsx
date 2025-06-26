@@ -1,4 +1,4 @@
-import { Component, ChangeEvent, FormEvent } from "react";
+import { Component, type ChangeEvent, type FormEvent } from "react";
 import { loginUser, registerUser, verifyUser } from "../services/api";
 
 export interface ILoading {

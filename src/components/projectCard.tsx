@@ -24,7 +24,7 @@ interface IProjectCardProps {
 
 // --- The Project Card Component ---
 const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
-    const { id, image, category, title, status, tags, collaborators, githubUrl, liveUrl, description } = project;
+    const { id, image, category, title, status, tags, collaborators, githubUrl, liveUrl } = project;
     const navigate = useNavigate();
 
     const handleCardClick = (e: React.MouseEvent) => {

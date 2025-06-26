@@ -8,5 +8,8 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  
+  base: '/MyScript/',
+  build: {
+    outDir: 'dist',
+  },
 })

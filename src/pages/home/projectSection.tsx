@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import ProjectCard, { IProject } from "../../components/projectCard";
+import ProjectCard, { type IProject } from "../../components/projectCard";
 import { fetchProjects } from "../../services/api";
 
 export interface ILoading {

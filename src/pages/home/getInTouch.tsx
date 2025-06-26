@@ -1,4 +1,4 @@
-import { Component, FormEvent, ChangeEvent } from "react";
+import { Component, type FormEvent, type ChangeEvent } from "react";
 import { IoIosLock } from "react-icons/io";
 import { MdMailLock } from "react-icons/md";
 import AuthModal from "../../components/AuthModal";

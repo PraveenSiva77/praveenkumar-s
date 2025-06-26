@@ -7,7 +7,6 @@ import SkillSection from "./skillSection";
 import ProjectSection from "./projectSection";
 import JourneySection from "./journeySection";
 import GetInTouch from "./getInTouch";
-import Footer from "../../components/footer";
 
 export interface ILoading {
     [key: string]: any;

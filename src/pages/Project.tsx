@@ -41,7 +41,7 @@ class Project extends Component<IProjectProps, IProjectState> {
 
     handleBack = () => {
         if (this.props.navigate) {
-            this.props.navigate(-1);
+            this.props.navigate(-1 as any);
         } else if (this.props.history) {
             this.props.history.goBack();
         } else {

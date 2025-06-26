@@ -1,8 +1,8 @@
-import { Component, ChangeEvent } from "react";
+import { Component, type ChangeEvent } from "react";
 import { fetchProjects } from "../services/api";
-import ProjectCard, { IProject } from "../components/projectCard";
+import ProjectCard, { type IProject } from "../components/projectCard";
 import { IoArrowBack, IoSearch } from "react-icons/io5";
-import { withRouter } from "../util/withRouter";
+// import { withRouter } from "../util/withRouter";
 
 import Particles from "../components/particles";
 
@@ -96,7 +96,7 @@ class AllProjects extends Component<IAllProjectsProps, IAllProjectsState> {
 
     handleBack = () => {
         if (this.props.navigate) {
-            this.props.navigate(-1);
+            this.props.navigate(-1 as any);
         } else if (this.props.history) {
             this.props.history.goBack();
         } else {

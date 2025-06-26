@@ -28,16 +28,16 @@ const chartOptions = {
     scales: {
         r: {
             angleLines: {
-                color: "rgba(255, 255, 255, 0.2)",
+                color: "rgba(255, 255, 255, 0.1)",
             },
             grid: {
-                color: "rgba(255, 255, 255, 0.2)",
+                color: "rgba(255, 255, 255, 0.1)",
             },
             pointLabels: {
                 color: "rgba(255, 255, 255, 0.8)",
                 font: {
-                    size: 14,
-                    weight: "bold",
+                    size: 12,
+                    weight: "normal" as const,
                 },
             },
             ticks: {
@@ -51,10 +51,9 @@ const chartOptions = {
     },
     plugins: {
         legend: {
-            display: false,
-        },
-        tooltip: {
-            enabled: true,
+            labels: {
+                color: "rgba(255, 255, 255, 0.8)",
+            },
         },
     },
     maintainAspectRatio: false,
