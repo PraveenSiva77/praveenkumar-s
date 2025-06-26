@@ -1,4 +1,146 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+*{
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'CalSans';
+  src: url(/public/fonts/CalSans-SemiBold.ttf) format('truetype');
+}
+
+@theme {
+  --font-display: 'CalSans', sans-serif;
+}
+
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+  }
+
+  .bg-gradient-radial {
+    background-image: var(--tw-gradient-radial);
+  }
+
+  .animate-fade-in {
+    animation: fade-in 3s ease-in-out forwards;
+  }
+  .animate-fade-out {
+    animation: fade-out 3s ease-in-out forwards;
+  }
+  .animate-fade-left {
+    animation: fade-left 3s ease-in-out forwards;
+  }
+  .animate-fade-right {
+    animation: fade-right 3s ease-in-out forwards;
+  }
+  .animate-fade-up {
+    animation: fade-up 3s ease-in-out forwards;
+  }
+  .animate-fade-down {
+    animation: fade-down 3s ease-in-out forwards;
+  } 
+  .animate-title {
+    animation: title 3s ease-in-out forwards;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes title {
+  0% {
+    line-height: 0%;
+    letter-spacing: 0.25em;
+    opacity: 0;
+  }
+  25% {
+    line-height: 0%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    line-height: 100%;
+    opacity: 1;
+  }
+} 

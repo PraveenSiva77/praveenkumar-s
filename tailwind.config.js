@@ -1,73 +1,111 @@
-const flowbite = require("flowbite-react/tailwind");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class',
-  
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    flowbite.content(),
-    'node_modules/flowbite-react/lib/esm/**/*.js',
-  ],
-  theme: {
-    extend: {
+	content: [
+		"./app/**/*.{js,ts,jsx,tsx}",
+		"./mdx-components.tsx",
+		"content/**/*.mdx",
+	],
 
-      colors: {
-        primary: {
-          light: '#1c64f2',  // Light theme primary color
-          dark: '#2c5282',   // Dark theme primary color
-        },
-        secondary: {
-          light: '#4299e1',  // Light theme secondary color
-          dark: '#2b6cb0',   // Dark theme secondary color
-        },
-        text: {
-          light: '#4a5568',  // Light theme text color
-          dark: '#e2e8f0',   // Dark theme text color
-        },
-        background: {
-          light: '#f7fafc',  // Light theme background color
-          dark: '#1a202c',   // Dark theme background color
-        },
-        accent: {
-          light: '#e2e8f0',  // Light theme accent color
-          dark: '#4a5568',   // Dark theme accent color
-        },
-      },
+	theme: {
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						"code::before": {
+							content: '""',
+						},
+						"code::after": {
+							content: '""',
+						},
+					},
+				},
+				quoteless: {
+					css: {
+						"blockquote p:first-of-type::before": { content: "none" },
+						"blockquote p:first-of-type::after": { content: "none" },
+					},
+				},
+			},
+			fontFamily: {
+				sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+				display: ["var(--font-calsans)"],
+			},
+			backgroundImage: {
+				"gradient-radial":
+					"radial-gradient(50% 50% at 50% 50%, var(--tw-gradient-stops))",
+			},
+			animation: {
+				"fade-in": "fade-in 3s ease-in-out forwards",
+				title: "title 3s ease-out forwards",
+				"fade-left": "fade-left 3s ease-in-out forwards",
+				"fade-right": "fade-right 3s ease-in-out forwards",
+			},
+			keyframes: {
+				"fade-in": {
+					"0%": {
+						opacity: "0%",
+					},
+					"75%": {
+						opacity: "0%",
+					},
+					"100%": {
+						opacity: "100%",
+					},
+				},
+				"fade-left": {
+					"0%": {
+						transform: "translateX(100%)",
+						opacity: "0%",
+					},
 
-      boxShadow: {
-        'md': '1px 1px 10px rgba(0, 0, 0, 0.3)',
-      },
-    },
-    screens: {
-      'lgx': {'max': '1023px'},
-      // => @media (max-width: 1023px) { ... }
+					"30%": {
+						transform: "translateX(0%)",
+						opacity: "100%",
+					},
+					"100%": {
+						opacity: "0%",
+					},
+				},
+				"fade-right": {
+					"0%": {
+						transform: "translateX(-100%)",
+						opacity: "0%",
+					},
 
-      'mdx': {'max': '767px'},
-      // => @media (max-width: 767px) { ... }
+					"30%": {
+						transform: "translateX(0%)",
+						opacity: "100%",
+					},
+					"100%": {
+						opacity: "0%",
+					},
+				},
+				title: {
+					"0%": {
+						"line-height": "0%",
+						"letter-spacing": "0.25em",
+						opacity: "0",
+					},
+					"25%": {
+						"line-height": "0%",
+						opacity: "0%",
+					},
+					"80%": {
+						opacity: "100%",
+					},
 
-      'smx': {'max': '639px'},
-      // => @media (max-width: 639px) { ... }
-
-      'xsx': {'max': '375px'},
-      // => @media (max-width:375px) { ... }
-
-      'xxsx': {'max': '320px'},
-      // => @media (max-width:320px) { ... }
-
-
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-    }
-  },
-  plugins: [
-    require('flowbite/plugin'),
-  ],
-}
+					"100%": {
+						"line-height": "100%",
+						opacity: "100%",
+					},
+				},
+			},
+		},
+	},
+	plugins: [
+		require("@tailwindcss/typography"),
+		// require("tailwindcss-debug-screens"),
+	],
+};
