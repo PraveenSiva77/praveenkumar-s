@@ -8,7 +8,7 @@ export type IError = string | null;
 
 export interface IAuthModalProps {
     onClose?: () => void;
-    onAuthSuccess?: (data?: { token: string; user: any }) => void; // Updated type
+    onAuthSuccess?: (data?: { token: string; user: any }) => void;
 }
 
 export interface IAuthModalState {
@@ -56,16 +56,13 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
         try {
             if (this.state.mode === "login") {
                 const data = await loginUser(this.state.email, this.state.password);
-                // Store token and user data
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("user", JSON.stringify(data.user));
                 this.setState({ loading: false });
-                // Pass the entire data object
                 if (this.props.onAuthSuccess) this.props.onAuthSuccess(data);
                 if (this.props.onClose) this.props.onClose();
             } else if (this.state.mode === "signup") {
                 await registerUser(this.state.name, this.state.email, this.state.password);
-                // Save for verification step
                 this.setState({
                     loading: false,
                     mode: "verify",
@@ -78,12 +75,10 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                 });
             } else if (this.state.mode === "verify") {
                 await verifyUser(this.state.tempEmail, this.state.otp);
-                // After verification, auto-login
                 const data = await loginUser(this.state.tempEmail, this.state.tempPassword);
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("user", JSON.stringify(data.user));
                 this.setState({ loading: false });
-                // Pass the entire data object
                 if (this.props.onAuthSuccess) this.props.onAuthSuccess(data);
                 if (this.props.onClose) this.props.onClose();
             }
@@ -237,11 +232,7 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                 </div>
             </div>
         );
-
-
-
-
-export default AuthModal;}    }    }
+    }
 }
 
 export default AuthModal;
