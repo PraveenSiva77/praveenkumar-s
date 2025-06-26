@@ -123,13 +123,7 @@ class SkillSection extends Component<ISkillSectionProps, ISkillSectionState> {
                         <p className="text-zinc-400 mt-2 mb-12">A visual representation of my key technical skills.</p>
                         <div className="relative mx-auto w-full max-w-xs sm:max-w-md md:max-w-2xl h-72 sm:h-80 md:h-[400px]">
                             {/* Profile image in the center */}
-                            <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-                                <img
-                                    src={ProfileUrl}
-                                    alt="Profile"
-                                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-4 border-zinc-800 shadow-lg"
-                                />
-                            </div>
+                            
                             <Radar data={chartData} options={chartOptions} />
                         </div>
                     </div>
@@ -153,11 +147,14 @@ class SkillSection extends Component<ISkillSectionProps, ISkillSectionState> {
                                             key={skill.id}
                                             className="flex items-center text-zinc-300 p-2 pr-4 rounded-full shadow-md border border-zinc-700 hover:bg-zinc-700 transition-colors cursor-pointer text-sm sm:text-base"
                                         >
-                                            <img
-                                                src={skill.image}
-                                                alt={skill.name}
-                                                className="w-6 h-6 mr-2 rounded-full object-fill bg-zinc-300"
-                                            />
+                                            <div className="rounded-full mr-2 p-1.5 bg-zinc-200 overflow-hidden">
+                                                <img
+                                                    src={skill.image}
+                                                    alt={skill.name}
+                                                    className="w-6 h-6 object-contain"
+                                                />
+                                            </div>
+
                                             <span className="font-semibold">{skill.name}</span>
                                         </div>
                                     ))}
