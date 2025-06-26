@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://api.sibisiddharth.me/api";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://api.praveensiva.me/api";
 
 /**
  * Fetch all skill categories with their skills.
