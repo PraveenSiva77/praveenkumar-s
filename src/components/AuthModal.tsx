@@ -8,7 +8,7 @@ export type IError = string | null;
 
 export interface IAuthModalProps {
     onClose?: () => void;
-    onAuthSuccess?: (token?: string) => void;
+    onAuthSuccess?: (data?: { token: string; user: any }) => void; // Updated type
 }
 
 export interface IAuthModalState {
@@ -56,11 +56,12 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
         try {
             if (this.state.mode === "login") {
                 const data = await loginUser(this.state.email, this.state.password);
-                // Store token if needed
+                // Store token and user data
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("user", JSON.stringify(data.user));
                 this.setState({ loading: false });
-                if (this.props.onAuthSuccess) this.props.onAuthSuccess(data.token);
+                // Pass the entire data object
+                if (this.props.onAuthSuccess) this.props.onAuthSuccess(data);
                 if (this.props.onClose) this.props.onClose();
             } else if (this.state.mode === "signup") {
                 await registerUser(this.state.name, this.state.email, this.state.password);
@@ -82,7 +83,8 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("user", JSON.stringify(data.user));
                 this.setState({ loading: false });
-                if (this.props.onAuthSuccess) this.props.onAuthSuccess(data.token);
+                // Pass the entire data object
+                if (this.props.onAuthSuccess) this.props.onAuthSuccess(data);
                 if (this.props.onClose) this.props.onClose();
             }
         } catch (error: any) {
@@ -120,8 +122,9 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                                 value={name}
                                 onChange={this.handleInputChange}
                                 placeholder="Name"
-                                className="px-4 py-3 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none"
+                                className="px-4 py-3 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:border-indigo-500 transition-colors"
                                 required
+                                disabled={loading}
                             />
                         )}
                         {(mode === "login" || mode === "signup") && (
@@ -132,8 +135,9 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                                     value={email}
                                     onChange={this.handleInputChange}
                                     placeholder="Email"
-                                    className="px-4 py-3 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none"
+                                    className="px-4 py-3 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:border-indigo-500 transition-colors"
                                     required
+                                    disabled={loading}
                                 />
                                 <input
                                     type="password"
@@ -141,41 +145,54 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                                     value={password}
                                     onChange={this.handleInputChange}
                                     placeholder="Password"
-                                    className="px-4 py-3 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none"
+                                    className="px-4 py-3 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:border-indigo-500 transition-colors"
                                     required
+                                    disabled={loading}
+                                    minLength={6}
                                 />
                             </>
                         )}
                         {mode === "verify" && (
-                            <input
-                                type="text"
-                                name="otp"
-                                value={otp}
-                                onChange={this.handleInputChange}
-                                placeholder="Enter OTP sent to your email"
-                                className="px-4 py-3 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none"
-                                required
-                            />
+                            <>
+                                <div className="text-zinc-400 text-sm text-center mb-2">
+                                    Enter the 6-digit OTP sent to <br />
+                                    <span className="text-white font-medium">{this.state.tempEmail}</span>
+                                </div>
+                                <input
+                                    type="text"
+                                    name="otp"
+                                    value={otp}
+                                    onChange={this.handleInputChange}
+                                    placeholder="Enter 6-digit OTP"
+                                    className="px-4 py-3 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:border-indigo-500 transition-colors text-center text-lg tracking-widest"
+                                    required
+                                    disabled={loading}
+                                    maxLength={6}
+                                    pattern="[0-9]{6}"
+                                />
+                            </>
                         )}
                         {error && (
-                            <div className="text-red-400 text-sm text-center">{error}</div>
+                            <div className="bg-red-900/20 border border-red-700 text-red-400 px-3 py-2 rounded-lg text-sm text-center">
+                                {error}
+                            </div>
                         )}
                         <button
                             type="submit"
-                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition-colors"
+                            className="bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-800 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-lg transition-colors"
                             disabled={loading}
                         >
                             {loading
                                 ? mode === "login"
                                     ? "Logging in..."
                                     : mode === "signup"
-                                    ? "Signing up..."
+                                    ? "Creating account..."
                                     : "Verifying..."
                                 : mode === "login"
                                 ? "Login"
                                 : mode === "signup"
-                                ? "Sign Up"
-                                : "Verify"}
+                                ? "Create Account"
+                                : "Verify Email"}
                         </button>
                     </form>
                     {mode !== "verify" && (
@@ -184,8 +201,9 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                                 <>
                                     Don't have an account?{" "}
                                     <button
-                                        className="text-indigo-400 hover:underline"
+                                        className="text-indigo-400 hover:text-white transition-colors"
                                         onClick={this.switchMode}
+                                        type="button"
                                     >
                                         Sign Up
                                     </button>
@@ -194,8 +212,9 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                                 <>
                                     Already have an account?{" "}
                                     <button
-                                        className="text-indigo-400 hover:underline"
+                                        className="text-indigo-400 hover:text-white transition-colors"
                                         onClick={this.switchMode}
+                                        type="button"
                                     >
                                         Login
                                     </button>
@@ -203,10 +222,26 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                             )}
                         </div>
                     )}
+                    {mode === "verify" && (
+                        <div className="mt-4 text-center text-zinc-400 text-xs">
+                            Didn't receive the code? Check your spam folder or{" "}
+                            <button
+                                className="text-indigo-400 hover:text-white transition-colors"
+                                onClick={() => this.setState({ mode: "signup", otp: "" })}
+                                type="button"
+                            >
+                                try again
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         );
-    }
+
+
+
+
+export default AuthModal;}    }    }
 }
 
 export default AuthModal;
