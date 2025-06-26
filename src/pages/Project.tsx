@@ -2,11 +2,9 @@ import { Component } from "react";
 import { fetchProjectById } from "../services/api";
 import { withRouter } from "../util/withRouter";
 import { 
-    IoArrowBack, 
-    IoCalendarOutline, 
+    IoArrowBack,  
     IoTimeOutline,
     IoCodeSlashOutline,
-    IoLinkOutline,
     IoLogoGithub,
     IoLogoLinkedin,
     IoPeopleOutline,

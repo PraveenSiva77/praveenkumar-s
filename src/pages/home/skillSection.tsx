@@ -22,8 +22,6 @@ export interface ISkillSectionState {
     radarData: number[];
 }
 
-const ProfileUrl = "https://avatars.githubusercontent.com/u/141736774?v=4";
-
 const chartOptions = {
     scales: {
         r: {
