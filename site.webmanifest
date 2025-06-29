@@ -1,0 +1,83 @@
+{
+  "name": "Praveenkumar",
+  "short_name": "Praveen Siva",
+  "description": "Passionate Full-stack Web Developer crafting innovative AI/ML solutions and building modern web applications with cutting-edge technologies.",
+  "start_url": "/", 
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6900",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/logo-120x120.png", 
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-128x128.png", 
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-144x144.png", 
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-152x152.png", 
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-192x192.png", 
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-256x256.png", 
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-384x384.png", 
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-512x512.png", 
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-1024x1024.png", 
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.svg", 
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://www.praveensiva.me"
+    }
+  ],
+  "categories": [
+    "portfolio",
+    "developer",
+    "showcase"
+  ],
+  "screenshots": [
+    {
+      "src": "/social-preview.png", 
+      "type": "image/png",
+      "sizes": "1080x1920"
+    }
+  ],
+  "scope": "/",
+  "id": "/"
+}
