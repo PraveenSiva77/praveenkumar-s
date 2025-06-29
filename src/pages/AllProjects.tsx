@@ -208,6 +208,8 @@ class AllProjects extends Component<IAllProjectsProps, IAllProjectsState> {
                                                 ? 'bg-indigo-600 text-white'
                                                 : 'bg-zinc-800/50 text-zinc-400 hover:text-white'
                                         }`}
+                                        title="Grid view"
+                                        aria-label="Grid view"
                                     >
                                         <FiGrid size={18} />
                                     </button>
@@ -218,6 +220,8 @@ class AllProjects extends Component<IAllProjectsProps, IAllProjectsState> {
                                                 ? 'bg-indigo-600 text-white'
                                                 : 'bg-zinc-800/50 text-zinc-400 hover:text-white'
                                         }`}
+                                        title="List view"
+                                        aria-label="List view"
                                     >
                                         <FiList size={18} />
                                     </button>
@@ -374,6 +378,8 @@ class AllProjects extends Component<IAllProjectsProps, IAllProjectsState> {
                                                         ? 'bg-indigo-600 text-white'
                                                         : 'text-zinc-400'
                                                 }`}
+                                                title="Grid view"
+                                                aria-label="Grid view"
                                             >
                                                 <FiGrid size={16} />
                                             </button>
@@ -384,6 +390,8 @@ class AllProjects extends Component<IAllProjectsProps, IAllProjectsState> {
                                                         ? 'bg-indigo-600 text-white'
                                                         : 'text-zinc-400'
                                                 }`}
+                                                title="List view"
+                                                aria-label="List view"
                                             >
                                                 <FiList size={16} />
                                             </button>
@@ -497,7 +505,7 @@ class AllProjects extends Component<IAllProjectsProps, IAllProjectsState> {
                 </div>
 
                 {/* Add the fade-in animation styles */}
-                <style jsx>{`
+                <style>{`
                     @keyframes fade-in-up {
                         from {
                             opacity: 0;

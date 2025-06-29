@@ -127,6 +127,8 @@ class AuthModal extends Component<IAuthModalProps, IAuthModalState> {
                             <button
                                 className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full text-zinc-400 hover:text-white hover:bg-zinc-700/50 transition-all duration-200"
                                 onClick={onClose}
+                                title="Close"
+                                aria-label="Close"
                             >
                                 <IoMdClose size={20} />
                             </button>
