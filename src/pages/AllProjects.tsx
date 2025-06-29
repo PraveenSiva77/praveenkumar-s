@@ -1,8 +1,8 @@
 import { Component, type ChangeEvent } from "react";
 import { fetchProjects } from "../services/api";
 import ProjectCard, { type IProject } from "../components/projectCard";
-import { IoArrowBack, IoSearch, IoFunnel, IoGrid, IoList } from "react-icons/io5";
-import { HiOutlineSparkles } from "react-icons/hi";
+import { IoArrowBack, IoSearch, IoGrid } from "react-icons/io5";
+// import { HiOutlineSparkles } from "react-icons/hi";
 import { FiFilter, FiGrid, FiList } from "react-icons/fi";
 import Particles from "../components/particles";
 

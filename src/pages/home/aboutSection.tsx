@@ -1,8 +1,7 @@
 import { Component } from "react";
-import { SiReaddotcv } from "react-icons/si";
-import { fetchAbout } from "../../services/api";
-import { HiOutlineSparkles, HiOutlineDownload, HiOutlineMail } from "react-icons/hi";
+import { HiOutlineDownload, HiOutlineMail } from "react-icons/hi";
 import { FiAward, FiUsers, FiTrendingUp } from "react-icons/fi";
+import { fetchAbout } from "../../services/api";
 
 export interface ILoading {
     [key: string]: any;

@@ -1,9 +1,10 @@
 import { Component, type FormEvent, type ChangeEvent } from "react";
 import { IoIosLock, IoMdMail, IoMdCheckmarkCircle } from "react-icons/io";
 import { MdMailLock, MdSubject, MdSend } from "react-icons/md";
-import { HiOutlineSparkles } from "react-icons/hi";
+import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from "react-icons/hi";
+import { FiSend, FiUser, FiMail, FiMessageSquare } from "react-icons/fi";
 import AuthModal from "../../components/AuthModal";
-import { sendContact } from "../../services/api";
+import { sendContactMessage } from "../../services/api";
 
 export interface ILoading {
     [key: string]: any;
@@ -119,57 +120,34 @@ class GetInTouch extends Component<IGetInTouchProps, IGetInTouchState> {
     handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         
-        const { name, email, subject, message } = this.state;
+        const { name, message, loading } = this.state;
         
-        if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
-            this.setState({ error: "Please fill in all fields." });
+        if (loading) return;
+        
+        if (!name.trim() || !message.trim()) {
+            this.setState({ 
+                error: "Please fill in all required fields.",
+                success: false 
+            });
             return;
         }
 
-        this.setState({ 
-            loading: { ...this.state.loading, send: true }, 
-            error: null, 
-            success: null 
-        });
+        this.setState({ loading: true, error: null, success: false });
 
         try {
-            const token = getTokenFromStorage();
-            
-            if (!token) {
-                throw new Error("Authentication required. Please log in again.");
-            }
-
-            const response = await sendContact(
-                { 
-                    name: name.trim(), 
-                    email: email.trim(), 
-                    subject: subject.trim(), 
-                    message: message.trim() 
-                },
-                token
-            );
-
+            await sendContactMessage({ name: name.trim(), message: message.trim() });
             this.setState({
-                loading: { ...this.state.loading, send: false },
-                success: response.message || "Message sent successfully!",
-                subject: "",
+                success: true,
+                loading: false,
+                name: "",
                 message: "",
+                error: null,
             });
-
-        } catch (error: any) {
-            let errorMessage = "Failed to send message.";
-            
-            if (error.message.includes("Authentication") || error.message.includes("token")) {
-                errorMessage = "Session expired. Please log in again.";
-                this.handleLogout();
-            } else {
-                errorMessage = error.message || "Failed to send message.";
-            }
-
+        } catch (error) {
             this.setState({
-                loading: { ...this.state.loading, send: false },
-                error: errorMessage,
-                success: null,
+                error: "Failed to send message. Please try again.",
+                loading: false,
+                success: false,
             });
         }
     };

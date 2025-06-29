@@ -3,12 +3,10 @@ import { fetchProjectById } from "../services/api";
 import { withRouter } from "../util/withRouter";
 import { 
     IoArrowBack,  
-    IoTimeOutline,
     IoCodeSlashOutline,
     IoLogoGithub,
     IoLogoLinkedin,
     IoPeopleOutline,
-    IoFolderOpenOutline,
     IoCheckmarkCircle,
     IoAlertCircle
 } from "react-icons/io5";
