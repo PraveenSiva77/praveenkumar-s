@@ -2,7 +2,7 @@ name: Deploy Portfolio to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # Change to 'master' if that's your default branch
+    branches: [ main ]  
   pull_request:
     branches: [ main ]
 
