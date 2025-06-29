@@ -1,9 +1,9 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import { HiOutlineArrowRight } from "react-icons/hi";
-import { FiGrid, FiGithub, FiExternalLink, FiArrowRight, FiCode, FiUsers } from "react-icons/fi";
-import ProjectCard, { type IProject } from "../../components/projectCard";
 import { fetchProjects } from "../../services/api";
+import { FiGrid } from "react-icons/fi";
+import { HiOutlineArrowRight } from "react-icons/hi";
+import ProjectCard, { type IProject } from "../../components/projectCard";
 
 export interface ILoading {
     [key: string]: any;
