@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import { HiOutlineSparkles, HiOutlineArrowRight } from "react-icons/hi";
-import { FiGrid, FiEye } from "react-icons/fi";
+import { HiOutlineArrowRight } from "react-icons/hi";
+import { FiGrid, FiGithub, FiExternalLink, FiArrowRight, FiCode, FiUsers } from "react-icons/fi";
 import ProjectCard, { type IProject } from "../../components/projectCard";
 import { fetchProjects } from "../../services/api";
 
@@ -194,21 +194,23 @@ class ProjectSection extends Component<IProjectSectionProps, IProjectSectionStat
                 </div>
 
                 {/* Add the fade-in animation styles */}
-                <style jsx>{`
-                    @keyframes fade-in-up {
-                        from {
-                            opacity: 0;
-                            transform: translateY(30px);
-                        }
-                        to {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-                    .animate-fade-in-up {
-                        animation: fade-in-up 0.6s ease-out;
-                    }
-                `}</style>
+                <style dangerouslySetInnerHTML={{
+    __html: `
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.6s ease-out;
+        }
+    `
+}} />
             </section>
         );
     }

@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from "react-icons/hi";
-import { FiSend, FiUser, FiMail, FiMessageSquare } from "react-icons/fi";
+import { FiSend, FiUser, FiMessageSquare } from "react-icons/fi";
 
 // Fix the interface and type definitions
 export interface IGetInTouchProps {}

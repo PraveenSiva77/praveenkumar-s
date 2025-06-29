@@ -1,6 +1,5 @@
 import { Component } from "react";
-import { HiOutlineSparkles, HiOutlineAcademicCap, HiOutlineBriefcase } from "react-icons/hi";
-import { FiBookOpen, FiUser } from "react-icons/fi";
+import { HiOutlineBriefcase, HiOutlineAcademicCap } from "react-icons/hi";
 import JourneyCard from "../../components/journeyCard";
 import { fetchEducation, fetchExperience } from "../../services/api";
 
@@ -275,21 +274,22 @@ class JourneySection extends Component<IJourneySectionProps, IJourneySectionStat
                 </div>
 
                 {/* Add the fade-in animation styles */}
-                <style jsx>{`
-                    @keyframes fade-in-up {
-                        from {
-                            opacity: 0;
-                            transform: translateY(30px);
-                        }
-                        to {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-                    .animate-fade-in-up {
-                        animation: fade-in-up 0.6s ease-out;
-                    }
-                `}</style>
+                <style dangerouslySetInnerHTML={{
+    __html: `
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.6s ease-out;
+        }
+    `}} />
             </section>
         );
     }
