@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet";
-import { fetchProjectById } from "../services/api";
-import { useParams, useNavigate } from "react-router-dom"; // Using react-router-dom hooks
+import { fetchProjectById } from "../services/api"; // Ensure this path is correct
+import { useParams, useNavigate } from "react-router-dom";
 import {
   IoArrowBack,
   IoCodeSlashOutline,
@@ -28,7 +28,7 @@ interface ProjectData {
   id: string;
   name: string;
   description: string;
-  projectImage: string;
+  projectImage: string; // Ensure this holds the full, absolute URL to the image
   startDate: string;
   endDate?: string;
   liveLink?: string;
@@ -48,8 +48,8 @@ interface ProjectData {
 }
 
 const Project: React.FC = () => {
-  const { id } = useParams<{ id: string }>(); // Get ID from URL params
-  const navigate = useNavigate(); // For navigation
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -60,25 +60,32 @@ const Project: React.FC = () => {
 
     const getProject = async () => {
       try {
-        const data = await fetchProjectById(id || "");
+        if (!id) {
+          setError("Project ID is missing.");
+          setLoading(false);
+          return;
+        }
+        const data = await fetchProjectById(id);
         setProject(data.data);
         setLoading(false);
       } catch (err) {
-        setError("Failed to load project.");
+        console.error("Error fetching project:", err);
+        setError("Failed to load project. Please try again.");
         setLoading(false);
       }
     };
 
     getProject();
-  }, [id]); // Re-run effect if ID changes
+  }, [id]);
 
   const handleBack = useCallback(() => {
-    navigate(-1); // Simpler navigation with useNavigate hook
+    navigate(-1);
   }, [navigate]);
 
   const generateMetaTags = useCallback(
     (project: ProjectData) => {
-      const currentUrl = window.location.href;
+      // Ensure the URL is absolute and canonical for social sharing
+      const currentUrl = window.location.href; // This will give the full URL like "https://yourdomain.com/projects/123"
 
       const description =
         project.description.length > 155
@@ -93,17 +100,21 @@ const Project: React.FC = () => {
         .slice(0, 3)
         .join(", ")} | Team: ${teamMembers} | Status: ${status}`;
 
+      // Ensure project.projectImage is an absolute URL (e.g., https://yourdomain.com/images/project1.jpg)
+      // If it's a relative path, prepend your base URL:
+      const absoluteProjectImage = new URL(project.projectImage, window.location.origin).href;
+
       return {
         title: `${project.name} - Project Showcase`,
         description: enhancedDescription,
         keywords: `${keywords}, project, portfolio, development, ${
           project.category?.name || "software"
         }`,
-        image: project.projectImage,
+        image: absoluteProjectImage, // This is the key for displaying the image
         url: currentUrl,
-        siteName: "Developer Portfolio",
-        type: "article",
-        author: teamMembers,
+        siteName: "Developer Portfolio", // Your portfolio's name
+        type: "article", // Or "website", "product", etc.
+        author: teamMembers, // Or a single author name if applicable
         publishedTime: project.startDate,
         modifiedTime: project.endDate || project.startDate,
         section: project.category?.name || "Projects",
@@ -166,9 +177,9 @@ const Project: React.FC = () => {
 
   return (
     <>
-      {/* Dynamic Meta Tags */}
+      {/* Dynamic Meta Tags using react-helmet */}
       <Helmet>
-        {/* Basic Meta Tags */}
+        {/* Basic Meta Tags for SEO */}
         <title>{metaTags.title}</title>
         <meta name="description" content={metaTags.description} />
         <meta name="keywords" content={metaTags.keywords} />
@@ -176,7 +187,7 @@ const Project: React.FC = () => {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={metaTags.url} />
 
-        {/* Open Graph / Facebook */}
+        {/* Open Graph / Facebook / LinkedIn / WhatsApp */}
         <meta property="og:type" content={metaTags.type} />
         <meta property="og:title" content={metaTags.title} />
         <meta property="og:description" content={metaTags.description} />
@@ -185,7 +196,25 @@ const Project: React.FC = () => {
         <meta property="og:site_name" content={metaTags.siteName} />
         <meta property="og:locale" content="en_US" />
 
-        {/* Open Graph Article */}
+        {/* Specific Open Graph for Images (Highly Recommended) */}
+        {/* These dimensions are common for a good preview on Facebook/LinkedIn */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        {/* Ensure the actual image at metaTags.image is close to these dimensions */}
+        <meta property="og:image:alt" content={`${project.name} project screenshot`} />
+        <meta property="og:image:type" content="image/jpeg" /> {/* Or image/png */}
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" /> {/* Shows image prominently */}
+        <meta name="twitter:title" content={metaTags.title} />
+        <meta name="twitter:description" content={metaTags.description} />
+        <meta name="twitter:image" content={metaTags.image} />
+        <meta name="twitter:url" content={metaTags.url} />
+        {/* Replace with your actual Twitter handle */}
+        <meta name="twitter:site" content="@praveenkumar_s7" /> 
+        <meta name="twitter:creator" content="@praveenkumar_s7" />
+
+        {/* Open Graph Article properties (useful for blog posts, projects as articles) */}
         <meta property="article:author" content={metaTags.author} />
         <meta property="article:published_time" content={metaTags.publishedTime} />
         <meta property="article:modified_time" content={metaTags.modifiedTime} />
@@ -194,32 +223,15 @@ const Project: React.FC = () => {
           <meta key={tag} property="article:tag" content={tag} />
         ))}
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTags.title} />
-        <meta name="twitter:description" content={metaTags.description} />
-        <meta name="twitter:image" content={metaTags.image} />
-        <meta name="twitter:url" content={metaTags.url} />
-        <meta name="twitter:site" content="https://x.com/praveenkumar_s7" />
-        <meta name="twitter:creator" content="https://x.com/praveenkumar_s7" />
-
-        {/* LinkedIn */}
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={`${project.name} project screenshot`} />
-
-        {/* WhatsApp */}
-        <meta property="og:image:type" content="image/jpeg" />
-
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#4f46e5" />
         <meta name="msapplication-TileColor" content="#4f46e5" />
 
-        {/* Schema.org structured data */}
+        {/* Schema.org structured data (for rich snippets in search results) */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "CreativeWork",
+            "@type": "CreativeWork", // Or "SoftwareSourceCode", "WebPage", "Product" etc.
             name: project.name,
             description: project.description,
             image: project.projectImage,
@@ -232,12 +244,15 @@ const Project: React.FC = () => {
             dateCreated: project.startDate,
             dateModified: project.endDate || project.startDate,
             genre: project.category?.name || "Software Development",
-            keywords: project.tags,
-            programmingLanguage: project.tags,
+            keywords: project.tags.join(", "), // Schema.org prefers comma-separated string for keywords
+            programmingLanguage: project.tags, // If tags represent technologies/languages
             creator: {
-              "@type": "Organization",
+              "@type": "Organization", // Or "Person" if it's your individual portfolio
               name: metaTags.siteName,
             },
+            // Add more relevant properties as needed for CreativeWork
+            // e.g., funding: { "@type": "Grant", name: "Grant Name" }
+            // or if it's an application: applicationCategory: "DeveloperTool"
           })}
         </script>
       </Helmet>
@@ -277,19 +292,25 @@ const Project: React.FC = () => {
                   <button
                     onClick={() => {
                       if (navigator.share) {
+                        // The Web Share API generally pulls the preview image from the URL's
+                        // Open Graph tags. You don't typically pass image files directly
+                        // unless you're sharing a file itself.
                         navigator.share({
                           title: metaTags.title,
-                          text: metaTags.description,
+                          text: `Check out my project: ${metaTags.description}`,
                           url: metaTags.url,
-                        });
+                          // images: [metaTags.image] // Not directly supported for image URLs, expects Blobs/Files
+                        }).catch((error) => console.error("Error sharing:", error));
                       } else {
+                        // Fallback for browsers/environments that don't support Web Share API
                         navigator.clipboard.writeText(metaTags.url);
+                        alert("Link copied to clipboard! You can paste it to share.");
                       }
                     }}
                     className="flex items-center gap-2 px-3 py-2 bg-zinc-800/80 backdrop-blur-sm border border-zinc-600/50 text-zinc-300 rounded-full text-sm font-medium hover:bg-zinc-700/80 transition-colors"
                   >
                     <FiExternalLink size={14} />
-                    <span className="hidden sm:inline">Share</span>
+                    <span className="hidden sm:inline">Share Project</span>
                   </button>
                 </div>
 
@@ -329,7 +350,7 @@ const Project: React.FC = () => {
                   </h1>
                 </div>
 
-                {/* Tags */}
+                {/* Tags (visible on larger screens) */}
                 <div className="hidden md:flex flex-wrap gap-2">
                   {project.tags.slice(0, 4).map((tag: string) => (
                     <span
