@@ -239,7 +239,7 @@ class GetInTouch extends Component<IGetInTouchProps, IGetInTouchState> {
                             ) : (
                                 <div className="space-y-6 sm:space-y-8">
                                     {/* Welcome Header */}
-                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 p-4 sm:p-6 bg-gradient-to-r from-zinc-800/30 to-zinc-700/30 rounded-xl sm:rounded-2xl border border-zinc-600/30 backdrop-blur-sm">
+                                    <div className="flex justify-between items-start sm:items-center gap-4 p-4 sm:p-6 bg-gradient-to-r from-zinc-800/30 to-zinc-700/30 rounded-xl sm:rounded-2xl border border-zinc-600/30 backdrop-blur-sm">
                                         <div className="flex items-center gap-3">
                                             <div className="w-10 h-10 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center border border-green-500/30">
                                                 <IoMdCheckmarkCircle className="text-green-400 text-xl" />

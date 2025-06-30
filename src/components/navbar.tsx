@@ -45,7 +45,7 @@ class Navbar extends Component<INavbarProps, INavbarState> {
 
         return (
             <div className="fixed top-4 md:top-8 left-1/2 -translate-x-1/2 w-full md:w-max p-2 animate-fade-in z-50 select-none">
-                <div className="flex items-center justify-between bg-zinc-800/90 backdrop-blur-md rounded-full px-1 md:p-2 shadow-lg border border-zinc-700 md:gap-2">
+                <div className="flex items-center justify-between mx-2 bg-zinc-800/90 backdrop-blur-md rounded-full px-1 md:p-2 shadow-lg border border-zinc-700 md:gap-2">
                     <a
                         href="/"
                         className="flex items-center space-x-2 text-white font-semibold mr-1"

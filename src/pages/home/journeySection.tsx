@@ -263,13 +263,6 @@ class JourneySection extends Component<IJourneySectionProps, IJourneySectionStat
                                 )}
                             </div>
                         )}
-
-                        {/* Bottom Decoration */}
-                        {!loading[tab] && !error && items.length > 0 && (
-                            <div className="flex justify-center mt-12 sm:mt-16">
-                                <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full"></div>
-                            </div>
-                        )}
                     </div>
                 </div>
 
