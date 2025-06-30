@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
+// Remove: import { Helmet } from "react-helmet-async";
 import { fetchProjectById } from "../services/api";
 import { withRouter } from "../util/withRouter";
 import { 
