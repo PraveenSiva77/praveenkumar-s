@@ -132,7 +132,7 @@ class CookiesSettings extends Component<{}, CookiesSettingsState> {
         const { settings, hasChanges, showSaveSuccess } = this.state;
 
         return (
-            <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 py-12 px-4">
+            <div className="min-h-screen py-12 px-4">
                 <div className="max-w-4xl mx-auto">
                     {/* Back Button */}
                     <div className="mb-8">

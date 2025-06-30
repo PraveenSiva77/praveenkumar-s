@@ -10,7 +10,7 @@ class PrivacyPolicy extends Component {
 
     render() {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 py-12 px-4">
+            <div className="min-h-screen bg-gradient-to-br py-12 px-4">
                 <div className="max-w-4xl mx-auto">
                     {/* Back Button */}
                     <div className="mb-8">
@@ -202,7 +202,7 @@ class PrivacyPolicy extends Component {
                                     If you have any questions about this Privacy Policy or your personal data, please contact us:
                                 </p>
                                 <div className="space-y-2 text-zinc-400">
-                                    <p><strong className="text-white">Email:</strong> sivak00763@gmail.com</p>
+                                    <p><strong className="text-white">Email:</strong> praveensiva0820@gmail.com</p>
                                     <p><strong className="text-white">Website:</strong> www.praveensiva.me</p>
                                     <p><strong className="text-white">Response Time:</strong> Within 48 hours</p>
                                 </div>
