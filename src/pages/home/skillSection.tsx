@@ -8,7 +8,7 @@ import { Component } from "react";
 //     Filler,
 //     Tooltip,
 // } from "chart.js";
-import { fetchSkillCategories, fetchSkillCategorySummaries } from "../../services/api";
+import { fetchSkillCategories } from "../../services/api";
 
 // ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip);
 
