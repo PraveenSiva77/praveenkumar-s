@@ -38,7 +38,7 @@ class AboutSection extends Component<IAboutSectionProps, IAboutSectionState> {
         return (
             <section id="about" className="py-12 px-4 w-full max-w-6xl relative overflow-hidden">
                 {/* Background Elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/5 via-transparent to-purple-600/5 opacity-50"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/5 via-transparent to-purple-600/5 opacity-50"></div> */}
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
 

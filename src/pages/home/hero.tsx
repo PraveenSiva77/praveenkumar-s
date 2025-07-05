@@ -108,7 +108,7 @@ class Hero extends Component<IHeroProps, IHeroState> {
                 </p>
 
                 {/* Dynamic tagline or company info */}
-                <p className="mt-2 text-lg text-zinc-400 animate-fade-in text-center">
+                {/* <p className="mt-2 text-lg text-zinc-400 animate-fade-in text-center">
                     {about?.tagline || (
                         <>
                             Founder of{" "}
@@ -120,7 +120,7 @@ class Hero extends Component<IHeroProps, IHeroState> {
                             </Link>
                         </>
                     )}
-                </p>
+                </p> */}
 
                 {/* Optional: Display a short bio if available */}
                 {about?.shortBio && (
