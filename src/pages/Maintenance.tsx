@@ -1,6 +1,5 @@
 import { Component } from "react";
-import { IoConstruct, IoMail, IoTime, IoCalendar } from "react-icons/io5";
-import { FiTwitter, FiGithub, FiLinkedin } from "react-icons/fi";
+import { IoConstruct, IoTime } from "react-icons/io5";
 import Particles from "../components/particles";
 
 export interface MaintenanceData {
@@ -159,7 +158,7 @@ class Maintenance extends Component<IMaintenanceProps, IMaintenanceState> {
     };
 
     render() {
-        const { email, subscribed, loading, error, timeRemaining, maintenanceData } = this.state;
+        const { timeRemaining, maintenanceData } = this.state;
 
         return (
             <div className="max-h-screen bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 relative overflow-hidden flex items-center justify-center">
