@@ -75,7 +75,8 @@ class App extends Component<{}, IAppState> {
                     });
                 }
             } else {
-                // If endpoint doesn't exist or returns error, assume no maintenance
+                // 401/404 is expected - endpoint may require auth or not exist yet
+                // Assume no maintenance and allow normal access
                 this.setState({
                     isMaintenanceMode: false,
                     maintenanceData: null,
@@ -83,8 +84,8 @@ class App extends Component<{}, IAppState> {
                 });
             }
         } catch (error) {
-            console.error("Error checking maintenance status:", error);
-            // On error, allow normal access
+            // Network error or CORS issue - allow normal access
+            console.warn("Could not check maintenance status, allowing access");
             this.setState({
                 isMaintenanceMode: false,
                 maintenanceData: null,

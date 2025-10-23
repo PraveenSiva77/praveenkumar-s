@@ -12,7 +12,7 @@ class SocketService {
             return;
         }
 
-        // Get socket URL from environment variable or use default
+        // Get socket URL from environment variable or use production default
         const socketUrl = import.meta.env.VITE_SOCKET_URL || "https://api.praveensiva.me";
 
         // Connect to the backend socket server

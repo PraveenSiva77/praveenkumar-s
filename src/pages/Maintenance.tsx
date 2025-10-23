@@ -74,8 +74,10 @@ class Maintenance extends Component<IMaintenanceProps, IMaintenanceState> {
                 const data = await response.json();
                 this.setState({ maintenanceData: data });
             }
+            // Silently ignore 401/404 errors
         } catch (error) {
-            console.error("Failed to fetch maintenance data:", error);
+            // Silently ignore network errors
+            console.warn("Could not fetch maintenance details");
         }
     };
 
